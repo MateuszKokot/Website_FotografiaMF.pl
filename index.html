@@ -1,135 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Blank Template for Bootstrap</title>
-        <!-- Bootstrap core CSS -->
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-        <!-- Custom styles for this template -->
-        <link href="style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    </head>
-    <body>
-        <div style="background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-image: url('http://s6.ifotos.pl/img/hahahagif_qxawxer.gif');
-    min-height: 700px;">
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0, 0.45);"> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
-                    <span class="navbar-toggler-icon"></span> 
-                </button>                 
-                <div class="collapse navbar-collapse" id="navbarToggler6"> 
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> 
-                        <li class="nav-item active"> 
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> 
-                        </li>                         
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="#">O mnie</a> 
-                        </li>
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="#">Galeria</a> 
-                        </li>
-                        <li class="nav-item"> 
-                            <a class="nav-link" href="#">Kontakt</a> 
-                        </li>                         
-                    </ul>                     
-                </div>
-                <div style="float: right;
-    position: absolute;
-    right: 30px;
-    top: 15px;">
-                    <a href="https://web.facebook.com/MilenaFlet/?pnref=lhc" target="_blank" style="background-image: url('samples/facebook%20icon.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding: 8px;
-    margin: 10px;"></a>
-                    <a href="https://www.instagram.com/milena.fleter.fotografia/" target="_blank" style="padding: 16px;
-    background-image: url('samples/instagram%20icon.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin: 10px;"></a>
-                </div>                 
-            </nav>
+<html> 
+<head> 
+  <meta charset="utf-8"> 
+  <title>Runner</title>         
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <link rel="stylesheet" href="reset.css"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/style4.css" />
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <script src="moveit.js"></script>         
+  <script src="jquery.js"></script>
+  <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>         
+  <script src="scripts.js"></script>         
+  <style></style>         
+</head>     
+<body> 
+  <div class="container"> 
+    <svg width="100px" height="100px"> 
+      <path id="first" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80" style="visibility: visible; stroke-dasharray: 43.5236, 246.634; stroke-dashoffset: 63.8346; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+      <path id="middle" d="M 30 50 L 70 50" style="visibility: visible; stroke-dasharray: 0, 40; stroke-dashoffset: 20; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+      <path id="second" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20" style="visibility: visible; stroke-dasharray: 43.707, 305.949; stroke-dashoffset: 64.6863; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+    </svg>             
+    <div class="trigger"></div>             
+  </div>         
+  <div class="menu">
+      <a href="">
+        <div class="bigLogo"> 
         </div>
-        <div class="row">
-            <div class="col-md-12" style="text-align: center;
-    min-height: 400px;">
-                <h3>O mnie</h3> 
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-        </div>
-        <div class="row bg-dark text-white">
-            <div class="col-md-12">
-                <h3 style="text-align: center;">Galeria</h3>
-            </div>
-        </div>
-        <div class="row ml-auto mr-auto justify-content-around bg-dark" style="justify-content: space-around;"> 
-            <div class="square col-md-4" style="min-width: 300px;">
-                <div class="content" style="/* overflow: hidden */
-    background-image: url('http://s5.ifotos.pl/img/klarajpg_qxawxeq.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;"></div>
-            </div>
-            <div class="col-md-4 square" style="min-width: 300px;">
-                <div class="content" style="overflow: hidden;
-    background-image: url('http://s6.ifotos.pl/img/parajpg_qxawxwp.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;"></div>
-            </div>             
-            <div class="col-md-4 square" style="min-width: 300px;">
-                <div class="content" style="overflow: hidden;
-    background-image: url('http://s6.ifotos.pl/img/ciazowa2j_qxawxwh.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;"></div>
-            </div>             
-        </div>
-        <div class="row ml-auto mr-auto justify-content-around bg-dark" style="justify-content: space-around;"> 
-            <div class="square col-md-4" style="min-width: 300px;">
-                <div class="content" style="/* overflow: hidden */
-    overflow: hidden;
-    background-image: url('http://s5.ifotos.pl/img/panienski_qxawxwr.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;"></div>
-            </div>
-            <div class="col-md-4 square" style="min-width: 300px;">
-                <div class="content" style="overflow: hidden;
-    background-image: url('http://s10.ifotos.pl/img/portretjp_qxawxwx.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;"></div>
-            </div>             
-            <div class="col-md-4 square" style="min-width: 300px;">
-                <div class="content" style="overflow: hidden;
-    background-image: url('http://s2.ifotos.pl/img/okoliczno_qxawxwn.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;"></div>
-            </div>             
-        </div>
-        <div class="container">
-</div>
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/popper.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-    </body>
+      </a>
+      <nav>
+        <ul>
+          <li class="menuitem" id="thisPage"><a href="" >Home</a></li>
+          <li class="menuitem"><a href="" >O mnie</a></li>
+          <li class="menuitem"><a href="" >Galerie</a></li>
+          <li class="menuitem"><a href="" >Kontakt</a></li>
+        </ul>
+      </nav>
+  </div>
+      <div class="leftGate trigger" id="leftGate">
+        <a href="">
+          <div class="smallLogo">
+          </div>
+        </a> 
+      </div>             
+      <div class="rightGate" id="rightGate">
+         <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+            <li><span>Image 06</span></li>
+        </ul>
+        <div class="banner">
+            <h2>Milena Fleter<br>Fotografia</h2>
+            <div class="kreska"></div>
+            <p>Jakiś cytat o czymś  coś tam gdzieś</p>
+            <a href=""><div class="przycisk">Zobacz moje prace</div></a>
+        </div>  
+      </div>           
+  <script>function injectCss(evt) {    var newCss = evt.data;    var newStyle = document.createElement("style");    newStyle.className = "kodnest-auto-reload";    if (newStyle.stylesheet) {        newStyle.stylesheet.cssText = newCss;    } else {        newStyle.appendChild(document.createTextNode(newCss));    }    document.head.appendChild(newStyle);    newStyle.parentNode.removeChild(document.querySelector(".kodnest-auto-reload"));}if (window.addEventListener) {    window.addEventListener("message", injectCss, false);}else {    window.attachEvent("onmessage", injectCss);}</script>
+</body>     
 </html>
