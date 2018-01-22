@@ -1,4 +1,21 @@
+//Po wczytaniu plików odpal to
+$(document).ready(function(){
 
+wwSmallwwBig()
+
+});
+
+
+
+// Jeśli zmieni się wielkość ekranu
+$(window).resize(function(){
+
+wwSmallwwBig()
+
+});
+
+
+//kod do generowania animowanego hamburger menu
 $(function() {
   var open = false,
   duration = 0.9,
@@ -45,11 +62,23 @@ $(function() {
         timing: timing
       });
 
-          // Tutaj mogę dopisać swoje skrypty dla pozycji otwartej
+          // Tutaj mogę dopisać swoje skrypty dla pozycji "OTWIERAJ"
           
+          var szerEkranu = $( window ).width();
+          var wysEkranu = $( window ).height();
+
+          if (szerEkranu <= wysEkranu) {
+
+            $('.rightGate').animate({'left': '+=85%' }, 'medium');
+            $('.leftGate').animate({'left': '-=15%' }, 'medium');
           
-          $('.rightGate').animate({'left': '+=170px' }, 'medium');
-          $('.leftGate').animate({'left': '-=100px' }, 'medium');
+          } else {
+
+            $('.rightGate').animate({'left': '+=14%' }, 'medium');
+            $('.leftGate').animate({'left': '-=6%' }, 'medium');
+          }
+
+
           
         } else {
           Moveit.animate(middle, {
@@ -83,34 +112,51 @@ $(function() {
             timing: timing
           });
 
-        // Tutaj mogę dopisać swoje skrypty dla pozycji zamkniętej
-        $('.rightGate').animate({'left': '-=170px'}, 'medium');
-        $('.leftGate').animate({'left': '+=100px'}, 'medium');
-        
+        // Tutaj mogę dopisać swoje skrypty dla pozycji "ZAMYKAJ"
+
+
+          var szerEkranu = $( window ).width();
+          var wysEkranu = $( window ).height(); 
+
+          if (szerEkranu <= wysEkranu) {
+
+            $('.rightGate').animate({'left': '-=85%' }, 'medium');
+            $('.leftGate').animate({'left': '+=15%' }, 'medium');
+          
+          } else {
+
+            $('.rightGate').animate({'left': '-=14%' }, 'medium');
+            $('.leftGate').animate({'left': '+=6%' }, 'medium');
+          }
+
       }
       open = !open;
     });
 
 })
 
-$(document).ready(function(){
 
-var warunek = true
+// Główna metoda przechowująca warunki kiedy szerokość ekranu jest mniejsza niż wysokość (msartfon)
+// oraz odwrotnie kiedy szerokość ekranu jest większa niz wysokość (smartfon horyzontalnie lub pc)
+function wwSmallwwBig() {
+  
+  var szerEkranu = $( window ).width();
+  var wysEkranu = $( window ).height();  
+  if (szerEkranu <= wysEkranu) {
+    
+    $('.leftGate').css('width','15%');
+    $('.rightGate').css('width','85%');
+    $('.menu').css('width','100%');
+    $('.rightGate').css('left','15%');
 
-if (warunek) {
-
-  $('#slider').animate({'width': '110%'}, 5000);
-  $('#slider').animate({'opacity': '0.0'}, 500);
-  warunek = false
+    //baner
+    
+  
+  } else {
+    $('.leftGate').css('width','6%');
+    $('.rightGate').css('width','94%');
+    $('.menu').css('width','20%');
+    $('.rightGate').css('left','6%');
+  }
 }
-
-if (!warunek) {
-  $('#slider').removeClass('slider');
-  $('#slider').addClass('sliderTwo');
-  $('#slider').animate({'opacity': '1.0'}, 500);
-  $('#slider').animate({'width': '100%'}, 5000);
-}
-
-});
-
           

@@ -22,7 +22,7 @@
       <path id="second" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20" style="visibility: visible; stroke-dasharray: 43.707, 305.949; stroke-dashoffset: 64.6863; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
     </svg>             
     <div class="trigger"></div>             
-  </div>         
+  </div>      
   <div class="menu">
       <a href="">
         <div class="bigLogo"> 
@@ -59,6 +59,18 @@
             <a href=""><div class="przycisk">Zobacz moje prace</div></a>
         </div>  
       </div>           
-  <script>function injectCss(evt) {    var newCss = evt.data;    var newStyle = document.createElement("style");    newStyle.className = "kodnest-auto-reload";    if (newStyle.stylesheet) {        newStyle.stylesheet.cssText = newCss;    } else {        newStyle.appendChild(document.createTextNode(newCss));    }    document.head.appendChild(newStyle);    newStyle.parentNode.removeChild(document.querySelector(".kodnest-auto-reload"));}if (window.addEventListener) {    window.addEventListener("message", injectCss, false);}else {    window.attachEvent("onmessage", injectCss);}</script>
+  <script>function injectCss(evt) {    
+  var newCss = evt.data;    
+  var newStyle = document.createElement("style");    
+  newStyle.className = "kodnest-auto-reload";    
+  if (newStyle.stylesheet) {        
+  newStyle.stylesheet.cssText = newCss;    
+  } else {        
+  newStyle.appendChild(document.createTextNode(newCss));    
+  }    
+  document.head.appendChild(newStyle);    
+  newStyle.parentNode.removeChild(document.querySelector(".kodnest-auto-reload"));}if (window.addEventListener) {    
+  window.addEventListener("message", injectCss, false);}else {    window.attachEvent("onmessage", injectCss);
+  }</script>
 </body>     
 </html>
