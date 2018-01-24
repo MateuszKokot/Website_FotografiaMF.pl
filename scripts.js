@@ -159,4 +159,26 @@ function wwSmallwwBig() {
     $('.rightGate').css('left','6%');
   }
 }
-          
+
+function openHome () {
+
+  location.reload();
+}    
+
+function openGallery () {
+
+  $('#rightGate').html('<iframe src="sub/gallery.html"></iframe>');
+   
+}     
+
+function openAboutMe () {
+
+      alert("O mnie");
+   
+}    
+
+function openContact () {
+
+      alert("Kontakt");
+   
+}    

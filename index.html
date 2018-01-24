@@ -22,27 +22,29 @@
       <path id="second" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20" style="visibility: visible; stroke-dasharray: 43.707, 305.949; stroke-dashoffset: 64.6863; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
     </svg>             
     <div class="trigger"></div>             
-  </div>      
+  </div>
+
+  <!-- MENU - ukryte pod bramami-->      
   <div class="menu">
-      <a href="">
-        <div class="bigLogo"> 
-        </div>
-      </a>
+      <div class="bigLogo"> 
+      </div>
       <nav>
-        <ul>
-          <li class="menuitem" id="thisPage"><a href="" >Home</a></li>
-          <li class="menuitem"><a href="" >O mnie</a></li>
-          <li class="menuitem"><a href="" >Galerie</a></li>
-          <li class="menuitem"><a href="" >Kontakt</a></li>
+        <ul class="nav">
+          <li class="menuitem trigger thisPage" id="home" onclick="openHome ()">Home</li>
+          <li class="menuitem trigger" id="aboutMe" onclick="openAboutMe ()">O mnie</li>
+          <li class="menuitem trigger" id="gallery" onclick="openGallery ()">Galerie</li>
+          <li class="menuitem trigger" id="contact" onclick="openContact ()">Kontakt</li>
         </ul>
       </nav>
   </div>
+
+    <!-- LEWA BRAMA-->      
       <div class="leftGate trigger" id="leftGate">
-        <a href="">
-          <div class="smallLogo">
-          </div>
-        </a> 
-      </div>             
+        <div class="smallLogo">
+        </div>
+      </div>    
+
+    <!-- PRAWA BRAMA-->           
       <div class="rightGate" id="rightGate">
          <ul class="cb-slideshow">
             <li><span>Image 01</span></li>

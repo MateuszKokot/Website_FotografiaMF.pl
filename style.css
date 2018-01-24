@@ -29,6 +29,7 @@ svg path, svg line {
   stroke-linecap: round;
   fill: none;
 }
+
 .trigger {
   position: absolute;
   width: 100%;
@@ -163,7 +164,11 @@ svg path, svg line {
   opacity: 0.8;
 }
 
+
 .menuitem {
+  width: auto;
+  height: auto;
+  position: static;
   font-family: 'Raleway', sans-serif;
   border-top: 1px solid #efefef;
   border-bottom: 1px solid #FFF;
@@ -175,13 +180,19 @@ svg path, svg line {
   font-size: 14px;
   text-transform: uppercase;
   border-left: 8px solid rgba(0,0,0,0.0);
+  z-index: 1;
 }
 
 .menuitem:hover {
   background-color: rgba(15,162,127,0.2);
 }
 
-#thisPage {
+.thisPage {
   border-left: 8px solid rgb(15,162,127);
   background-color: white;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
