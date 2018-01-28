@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   font-size: 15px;
   color: #aa3e03;
-  overflow-y: hidden;
+  overflow-y: show;
   overflow-x: hidden;
   z-index: 0;
 }
@@ -195,4 +195,46 @@ svg path, svg line {
 iframe {
   width: 100%;
   height: 100%;
+}
+
+.gallerySlider {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  background-color: green;
+
+}
+
+.thumbList {
+  display: inline-flex;
+  position: absolute;
+  top: 85%;
+  width: 100%;
+  height: 15%;
+  background-color: black;
+
+}
+
+.thumbItem {
+  display: inline-flex;
+  height: 100%
+  background-color: white;
+}
+
+.thumbImg {
+  position: static;
+  overflow: hidden;
+  cursor: pointer;
+  height: 92%;
+  margin: 4% 2%;
+
+}
+
+.log {
+  position: absolute;
+  text-align: left;
+  z-index: 99999;
+  color: red;
+  width: 100px;
+  height: 50px;
 }
