@@ -1,0 +1,22 @@
+.log {
+  position: absolute;
+  text-align: left;
+  z-index: 99999;
+  color: blue;
+  width: 100px;
+  height: 50px;
+}
+
+body {
+  background: white;
+  width: 100%;
+  height: 100%;
+  font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  overflow-y: show;
+  overflow-x: show;
+  z-index: 0;
+}
+
+.gallery {
+	display: none;
+}

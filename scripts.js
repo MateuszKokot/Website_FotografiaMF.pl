@@ -1,10 +1,7 @@
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
 
-mousePosition()
 wwSmallwwBig()
-scrollthumbList()
-moveThumbList()
 });
 
 
@@ -13,7 +10,6 @@ moveThumbList()
 $(window).resize(function(){
 
 wwSmallwwBig()
-
 });
 
 
@@ -185,21 +181,3 @@ function openContact() {
    
 }    
 
-function scrollthumbList() {
-
-
-}
-
-function mousePosition() {
-  $( window ).on( "mousemove", function( event ) {
-    var pageX = event.pageX;
-    var pageY = event.pageY;
-    $( "#log" ).text( "pageX: " + pageX + ", pageY: " + pageY );
-  });
-}
-
-
-function moveThumbList() {
- $('.thumbList').mousedown(function( event ) {
-  });
-}

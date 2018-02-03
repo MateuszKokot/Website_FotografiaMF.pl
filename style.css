@@ -4,7 +4,7 @@ src:url(fonts/heavy.ttf);
 }
 
 body {
-  background: lightblue;
+  background: white;
   width: 100%;
   height: 100%;
   font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
@@ -197,80 +197,4 @@ iframe {
   height: 100%;
 }
 
-.gallerySlider {
-  position: absolute;
-  width: 100%;
-  height: 88%;
-  background-color: lightgreen;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
-}
-
-.thumbList {
-  display: inline-flex;
-  position: absolute;
-  top: 88%;
-  width: 100%;
-  height: 12%;
-  background-color: black;
-
-}
-
-.thumbItem {
-  display: inline-flex;
-  height: 100%
-  background-color: white;
-}
-
-.thumbImg {
-  position: static;
-  overflow: hidden;
-  cursor: pointer;
-  height: 88%;
-  margin: 4% 2%;
-  opacity: 0.5;
-
-}
-
-.log {
-  position: absolute;
-  text-align: left;
-  z-index: 99999;
-  color: red;
-  width: 100px;
-  height: 50px;
-}
-
-.controlBar {
-  position: absolute;
-  right: 0px;
-  bottom: 12%;
-  z-index: 999;
-  min-width: 180px;
-  width: 11%;
-  min-height: 50px;
-  height: 5%;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.arrowLeft {
-  float: left;
-  width: 20%;
-  height: 100%;
-  background-image: url('../samples/left-arrow.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.arrowRight {
-  float: right;
-  width: 20%;
-  height: 100%;
-  background-image: url('../samples/right-arrow.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
