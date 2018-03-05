@@ -1,0 +1,21 @@
+<?PHP
+   $adresat = 'ever1942@gmail.com';    // pod ten adres zostanie wysłana wiadomosc 
+   $header =    $_POST['email']; 
+
+if (empty($_POST['email'])){ 
+
+      echo "<script>alert('Pole E-Mail jest puste !'); document.location.href='../index.php';";
+
+} else if (empty($_POST['content'])) { 
+
+      echo "<script>alert('Pole zawartość jest puste !'); document.location.href='../index.php';"; 
+
+} else { 
+   
+   $email = $_POST['email']; // Tutaj być powinno 
+   $content = $_POST['content']; // Tutaj być powinno 
+    if (mail($adresat, 'List ze strony', $content, $header)) 
+      echo "<script>alert('Wysłano !'); document.location.href='../index.php';</script>"; 
+}
+
+?>

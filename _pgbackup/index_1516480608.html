@@ -1,0 +1,51 @@
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <title>Runner</title>         
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="reset.css"> 
+        <link rel="stylesheet" href="style.css"> 
+        <script src="moveit.js"></script>         
+        <script src="jquery.js"></script>         
+        <script src="scripts.js"></script>         
+        <style></style>         
+    </head>     
+    <body> 
+        <div class="container"> 
+            <svg width="100px" height="100px"> 
+                <path id="first" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80" style="visibility: visible; stroke-dasharray: 43.5236, 246.634; stroke-dashoffset: 63.8346; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+                <path id="middle" d="M 30 50 L 70 50" style="visibility: visible; stroke-dasharray: 0, 40; stroke-dashoffset: 20; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+                <path id="second" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20" style="visibility: visible; stroke-dasharray: 43.707, 305.949; stroke-dashoffset: 64.6863; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+            </svg>             
+            <div class="trigger"></div>             
+        </div>         
+        <div class="menu"> 
+</div>         
+        <div class="global"> 
+            <div class="leftGate trigger" id="leftGate"> 
+</div>             
+            <div class="rightGate" id="rightGate">
+                <div class="row m-0 p-0">
+                    <div class="m-0 p-0 w-100"> 
+                        <div class="pg-empty-placeholder container-fluid w-100 m-0 p-0">
+                            <div class="w-100 m-0 p-0 d-flex justify-content-center"> 
+                                <img class="mySlides" src="samples/1.jpg"> 
+                                <img class="mySlides" src="samples/2.jpg"> 
+                            </div>                             
+                            <script>
+          carousel();
+        </script>                             
+                        </div>                         
+                    </div>
+                </div>                 
+            </div>             
+        </div>         
+        <script>function injectCss(evt) {    var newCss = evt.data;    var newStyle = document.createElement("style");    newStyle.className = "kodnest-auto-reload";    if (newStyle.stylesheet) {        newStyle.stylesheet.cssText = newCss;    } else {        newStyle.appendChild(document.createTextNode(newCss));    }    document.head.appendChild(newStyle);    newStyle.parentNode.removeChild(document.querySelector(".kodnest-auto-reload"));}if (window.addEventListener) {    window.addEventListener("message", injectCss, false);}else {    window.attachEvent("onmessage", injectCss);}</script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>         
+    </body>     
+</html>
