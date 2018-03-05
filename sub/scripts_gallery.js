@@ -1,7 +1,7 @@
+
 //Zmienne globalne
 
 var counter = 0;
-
 
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
@@ -10,6 +10,7 @@ mousePosition()
 createGallery()
 arrowClick()
 activSmallImg()
+
 });
 
 
@@ -21,7 +22,9 @@ location.reload();
 
 
 
+
 // Pojedyńcze funkcje
+
 function mousePosition() {
   $( window ).on( "mousemove", function( event ) {
     var pageX = event.pageX;
@@ -29,7 +32,6 @@ function mousePosition() {
     $( "#log" ).text( "pageX: " + pageX + ", pageY: " + pageY );
   });
 }
-
 
 
 
@@ -44,6 +46,7 @@ $('.gallery').after('<div class="mainImg"></div>');
 $('.mainImg').css('width', summaryWidth);
 $('.mainImg').after('<div class="listImg"></div>');
 $('.listImg').css('width', rightGateWidth / 9 * howMuchImg);
+$('.listImg').css('width', summaryWidth - 300); //Tutja do poprawy żeby ustawało szerowkóść zgodniez szerokością miniatur
 $('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><div class="arrow rightArrow"></div></div>');
 
 for (var i = 1; i < howMuchImg+1; i++) {
@@ -118,6 +121,39 @@ function activSmallImg() {
 
 }
 
+
+}
+
+$('.bigImg').css('width', rightGateWidth); // Ustawia dla wstawionych DIV szerokość taką jak szerokość rightGate
+
+}
+
+var poozycjaObrazka = 0;
+
+$(function() {
+
+	
+	$('.leftArrow').click(function(){
+	var tab = document.getElementsByClassName("obrazek"); //wczytuje obrazki z niewidocznego div
+	var howMuchImg = tab.length; // sprawdza ile ich jest
+	var rightGateWidth = $('body').width(); // sprawdza obecną szerokość okna
+	var summaryWidth = howMuchImg * rightGateWidth; //mnoży szerokość okna razy ilość obrazków
+	var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
+	
+	
+
+		if (summaryWidth - rightGateWidth > Math.abs(position)) {
+			var summary = position - rightGateWidth;
+			$('.mainImg').css('left', summary);
+		};
+
+	console.log(summaryWidth - rightGateWidth);
+	console.log(position);
+
+	}) // działa ale kulawo, może faktycznie zrobie licznik i tyle
+
+
+});
 
 
 
