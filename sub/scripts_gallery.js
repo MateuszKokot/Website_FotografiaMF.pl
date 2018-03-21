@@ -34,7 +34,6 @@ $('.gallery').after('<div class="mainImg"></div>');
 $('.mainImg').css('width', summaryWidth);
 $('.mainImg').after('<div class="listImg"></div>');
 $('.listImg').css('width', rightGateWidth / 9 * howMuchImg);
-$('.listImg').css('width', summaryWidth - 300); //Tutja do poprawy żeby ustawało szerowkóść zgodniez szerokością miniatur
 $('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><span class="arrow counter">txt</span><span class="arrow counterTotal">/'+howMuchImg+'</span><div class="arrow rightArrow"></div></div>');
 
 for (var i = 1; i < howMuchImg+1; i++) {
@@ -46,6 +45,8 @@ for (var i = 1; i < howMuchImg+1; i++) {
 $('.bigImg').css('width', rightGateWidth); // Ustawia dla wstawionych DIV szerokość taką jak szerokość rightGate
 $('.smallImgOwn').css('width', rightGateWidth / 9);
 $('.counter').html(''+(counter+1)+'');
+$('.ctrlBar').css('width', (rightGateWidth / 9 * 1.5));
+$('.ctrlBar').css('height', (rightGateWidth / 9 * 1.5 / 5));
 }
 
 
@@ -69,7 +70,9 @@ var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
 		$('#'+counter+'').removeClass('activImg');
 		counter = counter - 1;
 		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
 		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
 		$('.counter').html(''+(counter+1)+'');
 		
 		for (var i = 0; i <= (howMuchImg / 9); i++) {
@@ -91,7 +94,9 @@ var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
 		$('#'+counter+'').removeClass('activImg');
 		counter = counter + 1;
 		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
 		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
 		$('.counter').html(''+(counter+1)+'');
 		
 		for (var i = 0; i <= (howMuchImg / 9); i++) {
@@ -113,7 +118,9 @@ $('.smallImg').click(function(){  // event po kliknięciu na miniature
 		$('#'+counter+'').removeClass('activImg');
 		counter = Number($(this).attr('id'));
 		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
 		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
 		$('.counter').html(''+(counter+1)+'');
 	});
 

@@ -1,14 +1,14 @@
 body {
 	position: absolute;
-  background: black;
-  width: 100vw;
-  height: 100%;
-  font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  overflow-y: show;
-  overflow-x: show;
-  z-index: 0;
+  	background: black;
+  	width: 100vw;
+  	height: 100%;
+  	font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
+  	overflow-y: show;
+  	overflow-x: show;
+  	z-index: 0;
 }
 
 .gallery {
@@ -26,14 +26,11 @@ body {
 }
 
 .listImg {
-
 	display: inline-flex;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
 	height: 15%;
-	min-width: 100vw;
-	width: 50%;
 	background-color: black;
 }
 
@@ -45,7 +42,6 @@ body {
 }
 
 .smallImgOwn{
-
 	height: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -60,40 +56,44 @@ body {
 	background-size: cover;
 	cursor: pointer;
 	opacity: 0.3;
+	transition: opacity 0.3s;
+
+}
+
+.smallImg:hover{
+	opacity: 1.0;
+
 }
 
 .activImg {
 	opacity: 1.0;
+	
 }
 
 .ctrlBar {
 	position: absolute;
 	bottom: 15%;
 	right: 0px;
-	min-width: 180px;
-	min-height: 45px;
-	width: 10%;
-	height: 5%;
 	background-color: black;
 	opacity: 0.5;
-	z-index: 999;
 
 }
 
 .arrow {
 	position: absolute;
 	width: 20%;
-	height: 100%;
+	height: 80%;
 	color: rgb(15,162,127);
 	cursor: pointer;
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
-	transition: background-size 0.8s;
+	transition: height 0.2s;
+
 }
 
 .arrow:hover {
-	background-size: cover;
+	height: 100%;
 }
 
 
@@ -111,14 +111,14 @@ body {
 .counter{
 	width: auto;
 	right: 50%;
-	font-size: 250%;
+	font-size: 3vw ;
 	text-align: right;
 }
 
 .counterTotal{
 	width: auto;
 	left: 50%;
-	font-size: 150%;
+	font-size: 2vw;
 	text-align: left;
 }
 }
