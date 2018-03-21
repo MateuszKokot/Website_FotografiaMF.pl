@@ -3,13 +3,12 @@
 
 var counter = 0;
 
+
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
 
-mousePosition()
 createGallery()
 arrowClick()
-activSmallImg()
 
 });
 
@@ -25,17 +24,6 @@ location.reload();
 
 // Pojedyńcze funkcje
 
-function mousePosition() {
-  $( window ).on( "mousemove", function( event ) {
-    var pageX = event.pageX;
-    var pageY = event.pageY;
-    $( "#log" ).text( "pageX: " + pageX + ", pageY: " + pageY );
-  });
-}
-
-
-
-
 function createGallery() {
 var tab = document.getElementsByClassName("obrazek");
 var howMuchImg = tab.length;
@@ -47,16 +35,17 @@ $('.mainImg').css('width', summaryWidth);
 $('.mainImg').after('<div class="listImg"></div>');
 $('.listImg').css('width', rightGateWidth / 9 * howMuchImg);
 $('.listImg').css('width', summaryWidth - 300); //Tutja do poprawy żeby ustawało szerowkóść zgodniez szerokością miniatur
-$('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><div class="arrow rightArrow"></div></div>');
+$('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><span class="arrow counter">txt</span><span class="arrow counterTotal">/'+howMuchImg+'</span><div class="arrow rightArrow"></div></div>');
 
 for (var i = 1; i < howMuchImg+1; i++) {
 	var source = $('.obrazek:nth-child('+i+')').attr('src'); // Pobiera SRC obrazków podstawionych do DIV przechowującego galeria
 	$('.mainImg').append('<div class="bigImg" style="background-image: url('+source+')"></div>'); // Tworzy kolejne DVI'y w mainImg i doaje do nich tło z SRC
-	$('.listImg').append('<div id="'+(i-1)+'" class="smallImg" style="background-image: url('+source+')"></div>');
+	$('.listImg').append('<div class="smallImgOwn"><div id="'+(i-1)+'" class="smallImg" style="background-image: url('+source+')"></div></div>');
 }
 
 $('.bigImg').css('width', rightGateWidth); // Ustawia dla wstawionych DIV szerokość taką jak szerokość rightGate
-$('.smallImg').css('width', rightGateWidth / 9);
+$('.smallImgOwn').css('width', rightGateWidth / 9);
+$('.counter').html(''+(counter+1)+'');
 }
 
 
@@ -69,7 +58,7 @@ var tab = document.getElementsByClassName("obrazek"); //wczytuje obrazki z niewi
 var howMuchImg = tab.length; // sprawdza ile ich jest
 var rightGateWidth = $('body').width(); // sprawdza obecną szerokość okna
 var smallImgWidth = rightGateWidth / 9;
-activSmallImg()
+$('#0').addClass('activImg');
 
 
 $('.leftArrow').click(function(){  // event wykonywany po kliknięciu lewej strzałki
@@ -79,9 +68,17 @@ var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
 	if (counter  != 0) {
 		$('#'+counter+'').removeClass('activImg');
 		counter = counter - 1;
-		console.log(counter);
 		$('#'+counter+'').addClass('activImg');
 		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.counter').html(''+(counter+1)+'');
+		
+		for (var i = 0; i <= (howMuchImg / 9); i++) {
+
+			if (counter == ((i*9)+8) ) {
+				console.log('zmianalewo');
+				$('.listImg').animate({left: ( -( (i*9) * smallImgWidth))});
+			}
+		}
 		
 	}
 })
@@ -93,30 +90,45 @@ var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
 	if (counter < howMuchImg - 1) {
 		$('#'+counter+'').removeClass('activImg');
 		counter = counter + 1;
-		console.log(counter);
 		$('#'+counter+'').addClass('activImg');
 		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.counter').html(''+(counter+1)+'');
 		
+		for (var i = 0; i <= (howMuchImg / 9); i++) {
+
+			if (counter == ((i*9)+9) ) {
+				console.log('zmianaprawo');
+				$('.listImg').animate({left: ( -( ((i*9)+9) * smallImgWidth))});
+			}
+		}
+
 	}
+
+
 })
 
 
-
-
-
-function activSmallImg() {
-
-	$('#0').addClass('activImg');
-
-	$('.smallImg').click(function(){  // event po kliknięciu na miniature
+$('.smallImg').click(function(){  // event po kliknięciu na miniature
 
 		$('#'+counter+'').removeClass('activImg');
 		counter = Number($(this).attr('id'));
-		console.log(counter);
 		$('#'+counter+'').addClass('activImg');
 		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.counter').html(''+(counter+1)+'');
 	});
-}
+
+$(document).keypress(function(event){
+
+	var key = Number(event.which); // Nie czyta strzałek
+	if (key == 38) {
+		console.log('klik');
+		
+	}
+});
+
 
 }
+
+
+
 

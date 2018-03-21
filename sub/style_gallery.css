@@ -1,15 +1,6 @@
-.log {
-  position: absolute;
-  text-align: left;
-  z-index: 99999;
-  color: blue;
-  width: 100px;
-  height: 50px;
-}
-
 body {
 	position: absolute;
-  background: white;
+  background: black;
   width: 100vw;
   height: 100%;
   font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
@@ -50,15 +41,25 @@ body {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 }
 
-.smallImg{
+.smallImgOwn{
+
 	height: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	opacity: 0.5;
+}
+
+.smallImg{
+	margin: 3% 1.5%;
+	height: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	cursor: pointer;
+	opacity: 0.3;
 }
 
 .activImg {
@@ -83,6 +84,7 @@ body {
 	position: absolute;
 	width: 20%;
 	height: 100%;
+	color: rgb(15,162,127);
 	cursor: pointer;
 	background-position: center;
 	background-size: contain;
@@ -106,4 +108,17 @@ body {
 	background-image: url('../samples/right-arrow.png');
 }
 
+.counter{
+	width: auto;
+	right: 50%;
+	font-size: 250%;
+	text-align: right;
+}
+
+.counterTotal{
+	width: auto;
+	left: 50%;
+	font-size: 150%;
+	text-align: left;
+}
 }

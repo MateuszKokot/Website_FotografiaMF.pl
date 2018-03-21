@@ -4,7 +4,7 @@ src:url(fonts/heavy.ttf);
 }
 
 body {
-  background: white;
+  background: black;
   width: 100%;
   height: 100%;
   font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
