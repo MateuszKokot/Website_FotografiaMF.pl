@@ -16,24 +16,24 @@ body {
   z-index: 0;
 }
 .container {
-  width: 100px;
-  height: 100px;
   position: absolute;
+  width: 6vw;
+  height: 6vw;
   translate(-50%, -50%);
   z-index: 999;
 
 }
 svg path, svg line {
   stroke: rgb(15,162,127);
-  stroke-width: 6px;
+  stroke-width: 3px;
   stroke-linecap: round;
   fill: none;
 }
 
 .trigger {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 6vw;
+  height: 6vw;
   cursor: pointer;
   z-index: 999;
   top: 0;
@@ -43,7 +43,7 @@ svg path, svg line {
 .leftGate {
   position: absolute;
   background-color: #f5f5f5;
-  width: 0%;
+  width: 6%;
   height: 100vh;
   cursor: pointer;
   z-index: 2;
@@ -67,11 +67,11 @@ svg path, svg line {
 .rightGate {
   position: absolute;
   background-color: black;
-  width: 0%;
+  width: 94%;
   height: 100vh;
   z-index: 2;
   top: 0;
-  left: 0%;
+  left: 6%;
 }
 
 .banner {
@@ -146,7 +146,7 @@ svg path, svg line {
 .menu {
   position: absolute;
   background-color: #f5f5f5;
-  width: 270px;
+  width: 20%;
   height: 100%;
   z-index: 1;
   top: 0;
@@ -154,10 +154,10 @@ svg path, svg line {
 }
 
 .bigLogo {
-  width: 70%;
-  height: 290px;
-  margin: 15%;
-  margin-top: 100px;
+  width: 20vw;
+  height: 20vw;
+  margin: 0%;
+  margin-top: 0%;
   background-image: url('samples/logo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -190,6 +190,18 @@ svg path, svg line {
 .thisPage {
   border-left: 8px solid rgb(15,162,127);
   background-color: white;
+}
+
+.unterGallery {
+  position: absolute;
+  background-color: red;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.unterMenuItem {
+
 }
 
 iframe {

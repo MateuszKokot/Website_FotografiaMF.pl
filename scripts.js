@@ -1,7 +1,6 @@
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
-
-wwSmallwwBig()
+test();
 });
 
 
@@ -9,7 +8,6 @@ wwSmallwwBig()
 // Jeśli zmieni się wielkość ekranu
 $(window).resize(function(){
 
-wwSmallwwBig()
 });
 
 
@@ -61,22 +59,9 @@ $(function() {
       });
 
           // Tutaj mogę dopisać swoje skrypty dla pozycji "OTWIERAJ"
-          
-          var szerEkranu = $( window ).width();
-          var wysEkranu = $( window ).height();
-
-          if (szerEkranu <= wysEkranu) {
-
-            $('.rightGate').animate({'left': '+=85%' }, 'medium');
-            $('.leftGate').animate({'left': '-=15%' }, 'medium');
-          
-          } else {
 
             $('.rightGate').animate({'left': '+=14%' }, 'medium');
             $('.leftGate').animate({'left': '-=6%' }, 'medium');
-          }
-
-
           
         } else {
           Moveit.animate(middle, {
@@ -112,20 +97,8 @@ $(function() {
 
         // Tutaj mogę dopisać swoje skrypty dla pozycji "ZAMYKAJ"
 
-
-          var szerEkranu = $( window ).width();
-          var wysEkranu = $( window ).height(); 
-
-          if (szerEkranu <= wysEkranu) {
-
-            $('.rightGate').animate({'left': '-=85%' }, 'medium');
-            $('.leftGate').animate({'left': '+=15%' }, 'medium');
-          
-          } else {
-
             $('.rightGate').animate({'left': '-=14%' }, 'medium');
             $('.leftGate').animate({'left': '+=6%' }, 'medium');
-          }
 
       }
       open = !open;
@@ -133,30 +106,6 @@ $(function() {
 
 })
 
-
-// Główna metoda przechowująca warunki kiedy szerokość ekranu jest mniejsza niż wysokość (msartfon)
-// oraz odwrotnie kiedy szerokość ekranu jest większa niz wysokość (smartfon horyzontalnie lub pc)
-function wwSmallwwBig() {
-  
-  var szerEkranu = $( window ).width();
-  var wysEkranu = $( window ).height();  
-  if (szerEkranu <= wysEkranu) {
-    
-    $('.leftGate').css('width','15%');
-    $('.rightGate').css('width','85%');
-    $('.menu').css('width','100%');
-    $('.rightGate').css('left','15%');
-
-    //baner
-    
-  
-  } else {
-    $('.leftGate').css('width','6%');
-    $('.rightGate').css('width','94%');
-    $('.menu').css('width','20%');
-    $('.rightGate').css('left','6%');
-  }
-}
 
 function openHome() {
 
@@ -180,4 +129,38 @@ function openContact() {
   alert("Kontakt");
    
 }    
+
+//TODO - ogarnąć żeby responsywnie działąo hamburger menu
+function test() {
+
+var windowWidth = $(document).width();
+var mno = Number(windowWidth/1920);
+
+var first = ["M ","30 ","40 ","L ","70 ","40 ","C ","90 ","40 ","90 ","75 ","60 ","85 ","A ","40 ","40 ","0 ","0 ","1 ","20 ","20 ","L ","80 ","80"];
+var firstEnd = "M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80";
+console.log(first);
+//remakeTab(first);
+console.log(firstEnd);
+
+document.getElementById('first').setAttribute("d", firstEnd);
+
+
+function remakeTab(tab) {
+
+  for (var i = 0; i < tab.length; i++) {
+
+   if (Number(isFinite(String(tab[i])))) {
+
+     var before = tab[i] * mno;
+     tab[i] = before.toString();
+     firstEnd += tab[i] + " ";
+
+     } else {
+
+      firstEnd += tab[i] + " ";
+      }  
+    }
+  }
+}
+
 
