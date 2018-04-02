@@ -6,6 +6,19 @@ $('.activ').click(function(){
   $(this).addClass('thisPage');
 });
 
+$('.activeGallery').click(function(){
+  $('.thisGallery').removeClass('thisGallery');
+  $(this).addClass('thisGallery');
+});
+
+$('#gallery').click(function(){
+  $('.gallerymenu').animate({'left': '0%' }, 'slow');
+});
+
+$('.bar').click(function(){
+$('.gallerymenu').animate({'left': '-20vw' }, 'slow');
+
+});
 
 });
 
@@ -117,24 +130,23 @@ $(function() {
 
 
 function openHome() {
-
-  location.reload();
+  unactiveGallery()
 }    
 
 function openGallery() {
 
   $('#rightGate').html('<iframe src="sub/gallery.html"></iframe>');
-  $('.gallerymenu').animate({'left': '0vw' }, 'slow');
+  
    
 }     
 
 function openAboutMe() {
-
+unactiveGallery()
    
 }    
 
 function openContact() {
-
+unactiveGallery()
    
 }    
 
@@ -169,4 +181,10 @@ function remakeTab(tab) {
       }  
     }
   }
+}
+
+function unactiveGallery() {
+
+  $('.thisGallery').removeClass('thisGallery');
+  $('.galleryBar').addClass('thisGallery');
 }

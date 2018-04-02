@@ -147,7 +147,7 @@ svg path, svg line {
 .menu {
   position: absolute;
   background-color: #f5f5f5;
-  width: 20%;
+  width: 20vw;
   height: 100%;
   z-index: 1;
   top: 0;
@@ -171,7 +171,7 @@ svg path, svg line {
 
 .menuitem {
   display: block;
-  width: 20vw;
+  width: 15.4vw;
   height: 1.5vw;
   position: static;
   font-family: 'Raleway', sans-serif;
@@ -182,7 +182,7 @@ svg path, svg line {
   cursor: pointer;
   border-top: 0.18vh solid #efefef;
   border-bottom: 0.18vh solid #FFF;
-  border-left: 1vh solid rgba(0,0,0,0.0);
+  border-left: 0.6vw solid rgba(0,0,0,0.0);
   margin-bottom: 0;
   padding: 1.5vh 2vw;
   z-index: 1;
@@ -190,11 +190,6 @@ svg path, svg line {
 
 .menuitem:hover {
   background-color: rgba(15,162,127,0.2);
-}
-
-.thisPage {
-  border-left: 1vh solid rgb(15,162,127);
-  background-color: white;
 }
 
 .gallerymenu {
@@ -205,12 +200,12 @@ svg path, svg line {
   z-index: 2;
   margin-top: 10vh;
   top: 20vw;
-  left: -20vw;
+  left: -20%;
 }
 
 .gallerymenuitem {
   display: block;
-  width: 20vw;
+  width: 15.4vw;
   height: 1.5vw;
   position: static;
   font-family: 'Raleway', sans-serif;
@@ -221,7 +216,7 @@ svg path, svg line {
   cursor: pointer;
   border-top: 0.18vh solid #efefef;
   border-bottom: 0.18vh solid #FFF;
-  border-left: 1vh solid rgba(0,0,0,0.0);
+  border-left: 0.6vw solid rgba(0,0,0,0.0);
   margin-bottom: 0;
   padding: 1.5vh 2vw;
   z-index: 1;
@@ -230,6 +225,23 @@ svg path, svg line {
 .gallerymenuitem:hover {
   background-color: rgba(15,162,127,0.2);
 }
+
+.thisPage {
+  border-left: 0.6vw solid rgb(15,162,127);
+  background-color: white;
+}
+
+.thisGallery {
+  border-left: 0.6vw solid rgb(15,162,127);
+  background-color: white;
+}
+
+.bar {
+  border-left: 0.6vw solid rgb(15,162,127);
+  background-color: rgb(15,162,127);
+  color: white
+}
+
 
 iframe {
   width: 100%;
