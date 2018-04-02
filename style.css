@@ -54,13 +54,14 @@ svg path, svg line {
 .smallLogo {
   position: absolute;
   bottom: 0px;
-  width: 90%;
-  height: 150px;
+  width: 5vw;
+  height: 5vw;
   background-image: url('samples/logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 3;
-  margin: 5%;
+  margin: 0.5vw;
+  margin-bottom: 5vh;
   opacity: 0.8;
 }
 
@@ -138,7 +139,7 @@ svg path, svg line {
   background-image: url('samples/siatka.png');
   opacity: 0.5;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   z-index: 3;
 }
 
@@ -157,29 +158,33 @@ svg path, svg line {
   width: 20vw;
   height: 20vw;
   margin: 0%;
-  margin-top: 0%;
+  margin-top: 10vh;
   background-image: url('samples/logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.8;
 }
 
+.nav{
+
+}
 
 .menuitem {
-  width: auto;
-  height: auto;
+  display: block;
+  width: 20vw;
+  height: 1.5vw;
   position: static;
   font-family: 'Raleway', sans-serif;
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #FFF;
-  cursor: pointer;
-  margin-bottom: 0;
-  display: block;
-  padding: 20px 35px;
+  font-size: 1.5vh;
+  line-height: 3vh;
   color: #818181;
-  font-size: 14px;
   text-transform: uppercase;
-  border-left: 8px solid rgba(0,0,0,0.0);
+  cursor: pointer;
+  border-top: 0.18vh solid #efefef;
+  border-bottom: 0.18vh solid #FFF;
+  border-left: 1vh solid rgba(0,0,0,0.0);
+  margin-bottom: 0;
+  padding: 1.5vh 2vw;
   z-index: 1;
 }
 
@@ -188,20 +193,42 @@ svg path, svg line {
 }
 
 .thisPage {
-  border-left: 8px solid rgb(15,162,127);
+  border-left: 1vh solid rgb(15,162,127);
   background-color: white;
 }
 
-.unterGallery {
+.gallerymenu {
   position: absolute;
-  background-color: red;
+  background-color: #f5f5f5;
+  width: 20vw;
+  height: 100%;
   z-index: 2;
-  top: 0;
-  left: 0;
+  margin-top: 10vh;
+  top: 20vw;
+  left: -20vw;
 }
 
-.unterMenuItem {
+.gallerymenuitem {
+  display: block;
+  width: 20vw;
+  height: 1.5vw;
+  position: static;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5vh;
+  line-height: 3vh;
+  color: #818181;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-top: 0.18vh solid #efefef;
+  border-bottom: 0.18vh solid #FFF;
+  border-left: 1vh solid rgba(0,0,0,0.0);
+  margin-bottom: 0;
+  padding: 1.5vh 2vw;
+  z-index: 1;
+}
 
+.gallerymenuitem:hover {
+  background-color: rgba(15,162,127,0.2);
 }
 
 iframe {

@@ -1,6 +1,12 @@
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
-test();
+
+$('.activ').click(function(){
+  $('.thisPage').removeClass('thisPage');
+  $(this).addClass('thisPage');
+});
+
+
 });
 
 
@@ -107,6 +113,9 @@ $(function() {
 })
 
 
+
+
+
 function openHome() {
 
   location.reload();
@@ -115,18 +124,17 @@ function openHome() {
 function openGallery() {
 
   $('#rightGate').html('<iframe src="sub/gallery.html"></iframe>');
+  $('.gallerymenu').animate({'left': '0vw' }, 'slow');
    
 }     
 
 function openAboutMe() {
 
-  alert("O mnie");
    
 }    
 
 function openContact() {
 
-  alert("Kontakt");
    
 }    
 
@@ -162,5 +170,3 @@ function remakeTab(tab) {
     }
   }
 }
-
-
