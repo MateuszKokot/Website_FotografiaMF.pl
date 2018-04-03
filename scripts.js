@@ -12,11 +12,11 @@ $('.activeGallery').click(function(){
 });
 
 $('#gallery').click(function(){
-  $('.gallerymenu').animate({'left': '0%' }, 'slow');
+  $('.gallerymenu').animate({'left': '0%' }, 'fast');
 });
 
 $('.bar').click(function(){
-$('.gallerymenu').animate({'left': '-20vw' }, 'slow');
+$('.gallerymenu').animate({'left': '-20vw' }, 'fast');
 
 });
 
@@ -131,6 +131,7 @@ $(function() {
 
 function openHome() {
   unactiveGallery()
+  $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 }    
 
 function openGallery() {
