@@ -145,6 +145,7 @@ function openGallery() {
 
 function openAboutMe() {
 unactiveGallery()
+$('#rightGate').html('<iframe src="sub/aboutme.html"></iframe>');
    
 }    
 

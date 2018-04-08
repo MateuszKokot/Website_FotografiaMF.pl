@@ -1,13 +1,8 @@
-@font-face {
-font-family: heavy;
-src:url(fonts/heavy.ttf);
-}
-
 body {
   background: black;
   width: 100%;
   height: 100%;
-  font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #aa3e03;
@@ -73,6 +68,7 @@ svg path, svg line {
   z-index: 2;
   top: 0;
   left: 6%;
+
 }
 
 .banner {

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,800');
+
+.bodyAboutMe {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #1c1c1c;
+  	font-weight: 400;
+  	font-size: 15px;
+}
+
+.opis {
+	position: absolute;
+	top: 30vh;
+	width: 40vw;
+	height: 100vh;
+	background-color: #1c1c1c;
+	color: white;
+	text-align: center;
+}
+
+.name {
+	font-size: 4vh;
+	font-family: 'raleway', sans-serif;
+	font-weight: 200;
+
+}
+
+.surname {
+	font-size: 8vh;
+	font-family: 'raleway',sans-serif;
+	font-weight: 800;
+}
+
+.kreska {
+	height: 0.5vh;
+	width: 8vw;
+	background-color: rgb(15,162,127);
+	margin: auto;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+}
+
+.tekst {
+	line-height: 4vh;
+	font-size: 1.5vh;
+	font-family: 'raleway',sans-serif;
+	font-weight: 100;
+}
+
+.selfi {
+	position: absolute;
+	left: 40vw;
+	width: 60vw;
+	height: 100vh;
+	background-image: url('../images/selfie.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

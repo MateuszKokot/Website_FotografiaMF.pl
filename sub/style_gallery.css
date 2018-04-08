@@ -3,7 +3,8 @@ body {
   	background: black;
   	width: 100vw;
   	height: 100%;
-  	font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  	font-family: 'raleway', sans-serif;
+	font-weight: 200;
   	overflow-y: hidden;
   	overflow-x: hidden;
   	overflow-y: show;
@@ -22,7 +23,7 @@ body {
 	top: 0px;
 	left: 0px;
 	height: 85%;
-	background-color: black;
+	background-color: #1c1c1c;
 }
 
 .listImg {
@@ -31,7 +32,7 @@ body {
 	bottom: 0px;
 	left: 0px;
 	height: 15%;
-	background-color: black;
+	background-color: #1c1c1c;
 }
 
 .bigImg {
