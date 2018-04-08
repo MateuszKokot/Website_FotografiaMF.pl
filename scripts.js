@@ -17,8 +17,10 @@ $('#gallery').click(function(){
 
 $('.bar').click(function(){
 $('.gallerymenu').animate({'left': '-20vw' }, 'fast');
-
 });
+
+unactiveGallery();
+$('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 
 });
 
