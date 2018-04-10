@@ -151,7 +151,7 @@ $('#rightGate').html('<iframe src="sub/aboutme.html"></iframe>');
 
 function openContact() {
 unactiveGallery()
-   
+$('#rightGate').html('<iframe src="sub/contact.html"></iframe>');
 }    
 
 //TODO - ogarnąć żeby responsywnie działąo hamburger menu

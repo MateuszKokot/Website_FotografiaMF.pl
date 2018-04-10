@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,800');
+
+.bodyContact {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #1c1c1c;
+}
+
+.leftBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20vw;
+	height: 100vh;
+	background-color: #1c1c1c;
+}
+
+.contactBar {
+	position: absolute;
+	top: 25vh;
+	left: 3vw;
+	width: 14vw;
+	height: 50vh;
+	background-color: #1c1c1c;;
+	color: white;
+	font-family: 'raleway',sans-serif;
+}
+
+.contactBar h1 {
+	font-size: 5vh;
+	font-weight: 800;
+	margin-bottom: 4vh;
+}
+
+.contactBar p {
+	font-size: 1.5vh;
+	font-weight: 200;
+	color: #838383;
+}
+
+.contactBar h3 {
+	padding-left: 1.2vw;
+	font-size: 3vh;
+	font-weight: 300;
+	color: rgb(15,162,127);
+	border-left: solid;
+	border-color: rgb(15,162,127);
+	margin-top: 2vh;
+	margin-bottom: 1vh;
+
+}
+
+.separator {
+	width: 100%;
+	background-color: yellow;
+	border-top: 0.5px solid #838383;
+	border-bottom: 0.5px solid #272727;
+	margin-top: 2vh;
+
+
+
+}
+
+
+.mapBar {
+	position: absolute;
+	top: 0;
+	left: 20vw;
+	width: 80vw;
+	height: 100vh;
+	background-color: rgb(237,237,237);
+}
+
+.map {
+	width: 100%; 
+	height: 100%;
+
+}
