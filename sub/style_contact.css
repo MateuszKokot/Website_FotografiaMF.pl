@@ -34,6 +34,7 @@
 }
 
 .contactBar p {
+	line-height: 1.9vh;
 	font-size: 1.5vh;
 	font-weight: 200;
 	color: #838383;
