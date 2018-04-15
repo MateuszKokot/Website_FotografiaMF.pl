@@ -15,7 +15,7 @@ $('#gallery').click(function(){
   $('.gallerymenu').animate({'left': '0%' }, 'fast');
 });
 
-$('.bar').click(function(){
+$('.hiddenGallery').click(function(){
 $('.gallerymenu').animate({'left': '-20vw' }, 'fast');
 });
 
@@ -132,63 +132,37 @@ $(function() {
 
 
 function openHome() {
+
   unactiveGallery()
   $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 }    
 
+
 function openGallery() {
 
-  $('#rightGate').html('<iframe src="sub/gallery.html"></iframe>');
-  
-   
+  $('#rightGate').html('<iframe id="iframe" src="sub/gallery.html"></iframe>');
+  document.getElementById('iframe').focus();
 }     
 
+
 function openAboutMe() {
-unactiveGallery()
-$('#rightGate').html('<iframe src="sub/aboutme.html"></iframe>');
-   
+
+  unactiveGallery()
+  $('#rightGate').html('<iframe src="sub/aboutme.html"></iframe>');
 }    
+
 
 function openContact() {
-unactiveGallery()
-$('#rightGate').html('<iframe src="sub/contact.html"></iframe>');
+
+  unactiveGallery()
+  $('#rightGate').html('<iframe src="sub/contact.html"></iframe>');
 }    
 
-//TODO - ogarnąć żeby responsywnie działąo hamburger menu
-function test() {
-
-var windowWidth = $(document).width();
-var mno = Number(windowWidth/1920);
-
-var first = ["M ","30 ","40 ","L ","70 ","40 ","C ","90 ","40 ","90 ","75 ","60 ","85 ","A ","40 ","40 ","0 ","0 ","1 ","20 ","20 ","L ","80 ","80"];
-var firstEnd = "M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80";
-console.log(first);
-//remakeTab(first);
-console.log(firstEnd);
-
-document.getElementById('first').setAttribute("d", firstEnd);
-
-
-function remakeTab(tab) {
-
-  for (var i = 0; i < tab.length; i++) {
-
-   if (Number(isFinite(String(tab[i])))) {
-
-     var before = tab[i] * mno;
-     tab[i] = before.toString();
-     firstEnd += tab[i] + " ";
-
-     } else {
-
-      firstEnd += tab[i] + " ";
-      }  
-    }
-  }
-}
 
 function unactiveGallery() {
 
   $('.thisGallery').removeClass('thisGallery');
   $('.galleryBar').addClass('thisGallery');
 }
+
+

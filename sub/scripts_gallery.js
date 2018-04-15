@@ -7,8 +7,8 @@ var counter = 0;
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
 
-createGallery()
-arrowClick()
+createGallery();
+arrowClick();
 
 });
 
@@ -34,7 +34,7 @@ $('.gallery').after('<div class="mainImg"></div>');
 $('.mainImg').css('width', summaryWidth);
 $('.mainImg').after('<div class="listImg"></div>');
 $('.listImg').css('width', rightGateWidth / 9 * howMuchImg);
-$('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><span class="arrow counter">txt</span><span class="arrow counterTotal">/'+howMuchImg+'</span><div class="arrow rightArrow"></div></div>');
+$('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><span class="counter">txt</span><span class="counterTotal">/'+(howMuchImg)+'</span><div class="arrow rightArrow"></div></div>');
 
 for (var i = 1; i < howMuchImg+1; i++) {
 	var source = $('.obrazek:nth-child('+i+')').attr('src'); // Pobiera SRC obrazków podstawionych do DIV przechowującego galeria
@@ -124,18 +124,66 @@ $('.smallImg').click(function(){  // event po kliknięciu na miniature
 		$('.counter').html(''+(counter+1)+'');
 	});
 
-$(document).keypress(function(event){
 
-	var key = Number(event.which); // Nie czyta strzałek
-	if (key == 38) {
-		console.log('klik');
+$(document).keydown(function(event){ // obsługa galeri strzałakmi kalawiatury
+
+  var key = Number(event.which);
+
+  if (key == 39) { // W prawo
+    console.log(key);
+    var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
+
+	if (counter < howMuchImg - 1) {
+		$('#'+counter+'').removeClass('activImg');
+		counter = counter + 1;
+		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
+		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
+		$('.counter').html(''+(counter+1)+'');
+		
+		for (var i = 0; i <= (howMuchImg / 9); i++) {
+
+			if (counter == ((i*9)+9) ) {
+				console.log('zmianaprawo');
+				$('.listImg').animate({left: ( -( ((i*9)+9) * smallImgWidth))});
+			}
+		}
+
+	}
+    
+  }
+
+    if (key == 37) { // W lewo
+    console.log(key);
+    var position = $('.mainImg').position().left;
+
+	if (counter  != 0) {
+		$('#'+counter+'').removeClass('activImg');
+		counter = counter - 1;
+		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
+		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
+		$('.counter').html(''+(counter+1)+'');
+		
+		for (var i = 0; i <= (howMuchImg / 9); i++) {
+
+			if (counter == ((i*9)+8) ) {
+				console.log('zmianalewo');
+				$('.listImg').animate({left: ( -( (i*9) * smallImgWidth))});
+			}
+		}
 		
 	}
+    
+  }
+
 });
 
 
-}
 
+}
 
 
 
