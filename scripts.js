@@ -4,6 +4,7 @@ $(document).ready(function(){
 $('.activ').click(function(){
   $('.thisPage').removeClass('thisPage');
   $(this).addClass('thisPage');
+  unactiveGallery();
 });
 
 $('.activeGallery').click(function(){
@@ -19,7 +20,6 @@ $('.hiddenGallery').click(function(){
 $('.gallerymenu').animate({'left': '-20vw' }, 'fast');
 });
 
-unactiveGallery();
 $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 
 });
@@ -141,6 +141,12 @@ function openHome() {
 function openGallery() {
 
   $('#rightGate').html('<iframe id="iframe" src="sub/gallery.html"></iframe>');
+
+  $('.activeGallery').click(function(){
+    $('.thisPage').removeClass('thisPage');
+    $('#gallery').addClass('thisPage');
+    });
+
   document.getElementById('iframe').focus();
 }     
 
@@ -158,11 +164,7 @@ function openContact() {
   $('#rightGate').html('<iframe src="sub/contact.html"></iframe>');
 }    
 
-
 function unactiveGallery() {
-
   $('.thisGallery').removeClass('thisGallery');
-  $('.galleryBar').addClass('thisGallery');
 }
-
 

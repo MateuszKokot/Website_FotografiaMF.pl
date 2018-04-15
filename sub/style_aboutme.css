@@ -7,6 +7,12 @@
 	background-color: #1c1c1c;
   	font-weight: 400;
   	font-size: 15px;
+	animation: softStart 1s linear 0s 1 normal ;
+}
+
+@keyframes softStart {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .opis {

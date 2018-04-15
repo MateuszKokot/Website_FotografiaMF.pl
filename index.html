@@ -1,8 +1,6 @@
 <!--
 1.Hamburger menu zrobiony z divów
-2.Ostylowanie menu bo jest nieładne
 3.Stworzenie i podpięcie formularza zgłoszeniowego
-4.Miękka animacja przy ładowaniu kolejnych iframe
  -->
 
 <html>
@@ -21,7 +19,7 @@
   <script src="scripts.js"></script>         
           
 </head>     
-<body> 
+<body onselectstart="return false"> 
   <div class="container"> 
     <svg width="6vw" height="6vw"> 
       <path id="first" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80" style="visibility: visible; stroke-dasharray: 43.5236, 246.634; stroke-dashoffset: 63.8346; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
@@ -37,16 +35,22 @@
       </div>
         <ul class="nav">
           <li class="activ menuitem trigger thisPage" id="home" onclick="openHome ()">Home</li>
+          <div class="separatorMenu"></div>
           <li class="activ menuitem trigger" id="aboutMe" onclick="openAboutMe ()">O mnie</li>
-          <li class="activ menuitem" id="gallery" >Galerie</li>
+          <div class="separatorMenu"></div>
+          <li class="menuitem" id="gallery" >Galerie</li>
+          <div class="separatorMenu"></div>
           <li class="activ menuitem trigger" id="contact" onclick="openContact ()">Kontakt</li>
         </ul>
   </div>
   <div class="gallerymenu">
         <ul >
-          <li class=" gallerymenuitem bar thisGallery galleryBar hiddenGallery"> &#9001&#9001&#9001&nbsp&nbsp&nbsp Powrót do Menu</li>
+          <li class=" gallerymenuitem bar galleryBar hiddenGallery"> &#9001&#9001&#9001&nbsp&nbsp&nbsp Powrót do Menu</li>
+          <div class="separatorMenu"></div>
           <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="openGallery ()">Plenery</li>
+          <div class="separatorMenu"></div>
           <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="openGallery ()">Rozinne</li>
+          <div class="separatorMenu"></div>
           <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="openGallery ()">Na Fejsa</li>
         </ul>
   </div>

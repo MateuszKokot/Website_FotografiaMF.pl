@@ -168,21 +168,19 @@ svg path, svg line {
 }
 
 .menuitem {
+  background-color: #f5f5f5;;
   display: block;
   width: 15.4vw;
   height: 1.5vw;
   position: static;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5vh;
-  line-height: 3vh;
+  font-size: 1vw;
+  line-height: 1.5vw;
   color: #818181;
-  text-transform: uppercase;
   cursor: pointer;
-  border-top: 0.18vh solid #efefef;
-  border-bottom: 0.18vh solid #FFF;
   border-left: 0.6vw solid rgba(0,0,0,0.0);
   margin-bottom: 0;
-  padding: 1.5vh 2vw;
+  padding: 1.5vh 3vw;
   z-index: 1;
 }
 
@@ -203,25 +201,23 @@ svg path, svg line {
 
 .gallerymenuitem {
   display: block;
-  width: 15.4vw;
+  width: 13.4vw;
   height: 1.5vw;
   position: static;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5vh;
-  line-height: 3vh;
+  font-size: 1vw;
+  line-height: 1.5vw;
   color: #818181;
-  text-transform: uppercase;
   cursor: pointer;
-  border-top: 0.18vh solid #efefef;
-  border-bottom: 0.18vh solid #FFF;
   border-left: 0.6vw solid rgba(0,0,0,0.0);
   margin-bottom: 0;
-  padding: 1.5vh 2vw;
+  padding: 1.5vh 3vw;
   z-index: 1;
 }
 
 .gallerymenuitem:hover {
   background-color: rgba(15,162,127,0.2);
+
 }
 
 .thisPage {
@@ -235,13 +231,19 @@ svg path, svg line {
 }
 
 .bar {
-  border-left: 0.6vw solid rgb(15,162,127);
-  background-color: rgb(15,162,127);
-  color: white
+  border-left: 0.6vw solid transparent;
+
 }
 
 
 iframe {
   width: 100%;
   height: 100%;
+}
+
+.separatorMenu {
+  margin-left: 3.5vw;
+  width: 13vw;
+  border-top: 0.1vh solid #1c1c1c;
+
 }
