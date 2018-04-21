@@ -138,9 +138,9 @@ function openHome() {
 }    
 
 
-function openGallery() {
+function slubne() {
 
-  $('#rightGate').html('<iframe id="iframe" src="sub/gallery.html"></iframe>');
+  $('#rightGate').html('<iframe id="iframe" src="sub/śluby.html"></iframe>');
 
   $('.activeGallery').click(function(){
     $('.thisPage').removeClass('thisPage');
@@ -148,7 +148,67 @@ function openGallery() {
     });
 
   document.getElementById('iframe').focus();
-}     
+}
+
+function dzieci() {
+
+  $('#rightGate').html('<iframe id="iframe" src="sub/dzieci.html"></iframe>');
+
+  $('.activeGallery').click(function(){
+    $('.thisPage').removeClass('thisPage');
+    $('#gallery').addClass('thisPage');
+    });
+
+  document.getElementById('iframe').focus();
+}    
+
+function rodzinne() {
+
+  $('#rightGate').html('<iframe id="iframe" src="sub/rodzinne.html"></iframe>');
+
+  $('.activeGallery').click(function(){
+    $('.thisPage').removeClass('thisPage');
+    $('#gallery').addClass('thisPage');
+    });
+
+  document.getElementById('iframe').focus();
+}    
+
+function brzuszkowe() {
+
+  $('#rightGate').html('<iframe id="iframe" src="sub/brzuszkowe.html"></iframe>');
+
+  $('.activeGallery').click(function(){
+    $('.thisPage').removeClass('thisPage');
+    $('#gallery').addClass('thisPage');
+    });
+
+  document.getElementById('iframe').focus();
+}    
+
+function portrety() {
+
+  $('#rightGate').html('<iframe id="iframe" src="sub/portrety.html"></iframe>');
+
+  $('.activeGallery').click(function(){
+    $('.thisPage').removeClass('thisPage');
+    $('#gallery').addClass('thisPage');
+    });
+
+  document.getElementById('iframe').focus();
+}    
+
+function imprezy() {
+
+  $('#rightGate').html('<iframe id="iframe" src="sub/okolicznościowe.html"></iframe>');
+
+  $('.activeGallery').click(function(){
+    $('.thisPage').removeClass('thisPage');
+    $('#gallery').addClass('thisPage');
+    });
+
+  document.getElementById('iframe').focus();
+}    
 
 
 function openAboutMe() {

@@ -4,13 +4,12 @@
 	position: absolute;
   	background: #1c1c1c;;
   	width: 100vw;
-  	height: 100%;
+  	height: 100vh;
   	font-family: 'raleway', sans-serif;
 	font-weight: 200;
   	overflow-y: hidden;
   	overflow-x: hidden;
-  	overflow-y: show;
-  	overflow-x: show;
+  	overflow: hidden;
   	z-index: 0;
 	animation: softStart 1s linear 0s 1 normal ;
 }
@@ -30,7 +29,8 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	height: 85%;
+	height: 85vh;
+	width: 100vw;
 	background-color: #1c1c1c;
 }
 
@@ -39,19 +39,19 @@
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
-	height: 15%;
+	height: 15vh;
 	background-color: #1c1c1c;
 }
 
 .bigImg {
-	height: 100%;
+	height: 85vh;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 }
 
 .smallImgOwn{
-	height: 100%;
+	height: 15vh;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -81,7 +81,7 @@
 
 .ctrlBar {
 	position: absolute;
-	bottom: 15%;
+	bottom: 15vh;
 	right: 0px;
 	background-color: #1c1c1c;
 	opacity: 0.5;

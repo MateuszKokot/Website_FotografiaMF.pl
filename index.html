@@ -1,6 +1,8 @@
 <!--
 1.Hamburger menu zrobiony z divów
+2.Preloader z animowanym logo
 3.Stworzenie i podpięcie formularza zgłoszeniowego
+4. W mozzilli jest zwalone styloanie galerri. Tylko elementy, które sa tworzone w JS. Dodanie parametru vh vw w JS powinno załątwić sprawe.
  -->
 
 <html>
@@ -14,8 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/demo.css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="moveit.js"></script>         
-  <script src="jquery.js"></script>
-  <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>         
+  <script src="jquery.js"></script>      
   <script src="scripts.js"></script>         
           
 </head>     
@@ -47,11 +48,17 @@
         <ul >
           <li class=" gallerymenuitem bar galleryBar hiddenGallery"> &#9001&#9001&#9001&nbsp&nbsp&nbsp Powrót do Menu</li>
           <div class="separatorMenu"></div>
-          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="openGallery ()">Plenery</li>
+          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="slubne()">Śluby</li>
           <div class="separatorMenu"></div>
-          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="openGallery ()">Rozinne</li>
+          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="dzieci()">Dzieci</li>
           <div class="separatorMenu"></div>
-          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="openGallery ()">Na Fejsa</li>
+          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="rodzinne()">Rodzinne</li>
+          <div class="separatorMenu"></div>
+          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="brzuszkowe()">Brzuszkowe</li>
+          <div class="separatorMenu"></div>
+          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="portrety()">Portrety</li>
+          <div class="separatorMenu"></div>
+          <li class=" activeGallery gallerymenuitem trigger hiddenGallery" onclick="imprezy()">Okolicznościowe</li>
         </ul>
   </div>
 

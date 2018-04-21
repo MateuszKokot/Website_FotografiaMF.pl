@@ -54,9 +54,9 @@
 }
 
 .titleShow li h1 {
-	font-weight: 900;
+	font-weight: 400;
   	color: white;
-  	line-height: 6vh;
+  	line-height: 8vh;
   	font-size: 6vh;
   	text-transform: uppercase;
 }
@@ -123,15 +123,15 @@ Pozostałe 80% animacja nadal trwa ale jest w opacity: 0 więc nic nie widać. N
 }
 
 .titleShow li:nth-child(3) {
-	animation: titleLeft 30s linear infinite 12s;
+	animation: titleRight 30s linear infinite 12s;
 }
 
 .titleShow li:nth-child(4) {
-	animation: titleRight 30s linear infinite 18s;
+	animation: titleLeft 30s linear infinite 18s;
 }
 
 .titleShow li:nth-child(5) {
-	animation: titleLeft 30s linear infinite 24s;
+	animation: titleRight 30s linear infinite 24s;
 }
 
 
