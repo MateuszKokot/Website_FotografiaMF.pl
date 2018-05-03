@@ -16,17 +16,6 @@
     to {opacity: 1;}
 }
 
-.mask {
-	position: absolute;
-  	background-image: url('../images/siatka2.png');
-  	background-repeat: repeat;
-  	background-size: 0.25%;
-  	opacity: 0.5;
-  	width: 100vw;
-  	height: 100vh;
-  	z-index: 900;
-}
-
 .titleShow {
 	position: absolute;
 	text-shadow: 0.5vh 0.5vh 0.5vh #000000;
@@ -87,31 +76,42 @@
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
+	cursor: pointer;
 }
+
+.linkShow li a {
+	position: absolute;
+	top: -100vh;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+	}
 
 /*Długość animacji pojedyńczego zdjęcia to wynika z procentowego rozpisania animacji w @keyframe. W tym wypadku jest to 20% czyli 1 piąta czasu całej animacji (w tym wypadku 30s).
 Pozostałe 80% animacja nadal trwa ale jest w opacity: 0 więc nic nie widać. Następowanie po sobie zdjęć wynika z tego, że dla każdego zdjęcia jest podpięta ta sama animacja ale z odpowiedznim opóźnieniem 
 (łączny czas podzielony przez liczbę zdjęć) pierwszego oczywiście nie opóźniamy*/
 
 .slideshow li:nth-child(1) span {
-	animation: versionRightDownZoomIn 30s linear infinite;
+	animation: versionLeftDownZoomOut 30s linear infinite;
 }
 
 .slideshow li:nth-child(2) span {
-	animation: versionRightDownZoomOut 30s linear infinite 6s;
+	animation: versionLeftDownZoomIn 30s linear infinite 6s;
 }
 
 .slideshow li:nth-child(3) span {
-	animation: versionLeftDownZoomIn 30s linear infinite 12s;
+	animation: versionRightDownZoomOut 30s linear infinite 12s;
 }
 
 .slideshow li:nth-child(4) span {
-	animation: versionLeftDownZoomOut 30s linear infinite 18s;
+	animation: versionRightDownZoomIn 30s linear infinite 18s;
 }
 
 .slideshow li:nth-child(5) span {
-	animation: versionRightUpZoomIn 30s linear infinite 24s;
+	animation: versionLeftDownZoomOut 30s linear infinite 24s;
 }
+
+
 
 
 .titleShow li:nth-child(1) {
@@ -131,8 +131,33 @@ Pozostałe 80% animacja nadal trwa ale jest w opacity: 0 więc nic nie widać. N
 }
 
 .titleShow li:nth-child(5) {
-	animation: titleRight 30s linear infinite 24s;
+	animation: titleLeft 30s linear infinite 24s;
 }
+
+
+
+
+.linkShow li:nth-child(1) a {
+	animation: linkInOut 30s linear infinite;
+}
+
+.linkShow li:nth-child(2) a {
+	animation: linkInOut 30s linear infinite 6s;
+}
+
+.linkShow li:nth-child(3) a {
+	animation: linkInOut 30s linear infinite 12s;
+}
+
+.linkShow li:nth-child(4) a {
+	animation: linkInOut 30s linear infinite 18s;
+}
+
+.linkShow li:nth-child(5) a {
+	animation: linkInOut 30s linear infinite 24s;
+}
+
+
 
 
 /*ANIMATION ZOOM-IN*/
@@ -550,5 +575,24 @@ Pozostałe 80% animacja nadal trwa ale jest w opacity: 0 więc nic nie widać. N
 	left: 0%;
 	bottom: 0%;
 	opacity: 0;
+	}
+}
+
+@keyframes linkInOut {
+
+	0%{
+		top: -100vh;
+	}
+
+	1%{
+		top: 0vh;
+	}
+
+	99%{
+		top: 0vh;
+	}
+
+	100% {
+		top: -100vh;
 	}
 }

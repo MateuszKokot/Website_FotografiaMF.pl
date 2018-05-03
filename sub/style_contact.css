@@ -26,6 +26,7 @@
 	width: 25vw;
 	height: 100vh;
 	background-color: #1c1c1c;
+	z-index: 1;
 }
 
 .contactBar {
@@ -39,7 +40,7 @@
 	font-family: 'raleway',sans-serif;
 }
 
-.contactBar h1 {
+h1 {
 	font-size: 5vh;
 	font-weight: 800;
 	margin-bottom: 4vh;
@@ -158,5 +159,106 @@
 .map {
 	width: 100%; 
 	height: 100%;
+
+}
+
+.backgroundForm{
+	position: absolute;
+	top: -100vh;
+	left: 0vw;
+	background-color: #1c1c1c;
+	opacity: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+}
+
+.contactForm{
+	position: absolute;
+	top: -100vh;
+	left: 30vw;
+	background-color: #1c1c1c;
+	opacity: 0;
+	width: 40vw;
+	height: 80vh;
+	border-style: solid;
+	border-color: rgb(15,162,127);
+	border-width: 0.1vh;
+	color: white;
+	font-family: 'raleway',sans-serif;
+	font-weight: 200;
+	font-size: 2vh;
+	line-height: 3vh;
+	z-index: 999;
+}
+
+
+.contactForm p {
+	margin: 0vh 2.5vw;
+	width: 35vw;
+	font-family: 'raleway',sans-serif;
+	font-weight: 200;
+	font-size: 2vh;
+	color: rgb(15,162,127);
+
+}
+
+
+.contactForm textarea{
+	height: 20vh;
+
+}
+
+.contactForm h1 {
+	margin-top: 6vh;
+	margin-left: 2.5vw;
+	margin-bottom: 5vh;
+}
+
+
+.form{
+	background-color: lightgrey;
+	margin: 0vh 2.5vw;
+	margin-bottom: 2vh;
+	width: 35vw;
+	height: 4vh;
+	font-family: 'raleway',sans-serif;
+	font-weight: 400;
+	font-size: 2vh;
+	color: black;
+	border-style: solid;
+	border-color: white;
+	border-width: 0.4vh;
+}
+
+.formButton{
+	background-color: transparent;
+	padding: 0 1vw;
+	cursor: pointer;
+	width: 35vw;
+	margin: 0vh 2.5vw;
+	margin-top: 2vh;
+	font-family: 'raleway',sans-serif;
+	font-weight: 200;
+	font-size: 2vh;
+	line-height: 5vh;
+	text-align: center;
+	color: white;
+	border-style: solid;
+	border-color: white;
+	border-width: 0.1vh;
+	transition: 0.3s;
+}
+
+
+.formButton:hover {
+	color: rgb(15,162,127);
+	line-height: 6vh;
+	font-size: 2.1vh;
+	font-weight: 300;
+	width: 36vw;
+	margin-top: 1.5vh;
+	margin-left: 2vw;
+
 
 }

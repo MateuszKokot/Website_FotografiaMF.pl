@@ -16,25 +16,38 @@ body {
   position: absolute;
   width: 6vw;
   height: 6vw;
-  translate(-50%, -50%);
-  z-index: 999;
-
-}
-svg path, svg line {
-  stroke: rgb(15,162,127);
-  stroke-width: 3px;
-  stroke-linecap: round;
-  fill: none;
+  z-index: 997;
+  transition: 1s;
 }
 
-.trigger {
+.hamburgerMenu {
   position: absolute;
   width: 6vw;
   height: 6vw;
-  cursor: pointer;
   z-index: 999;
+  cursor: pointer;
   top: 0;
   left: 0;
+}
+
+.ml {
+  position: absolute;
+  left: 1.5vw;
+  background-color: rgb(15,162,127);
+  width: 3vw;
+  height: 0.3vh;
+}
+
+.menuLineOne {
+  top: 2vw;
+}
+
+.menuLineTwo {
+  top: 2.75vw;
+}
+
+.menuLineThree {
+  top: 3.5vw;
 }
 
 .leftGate {

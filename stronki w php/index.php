@@ -1,18 +1,19 @@
 <!--
 1.Hamburger menu zrobiony z divów
 2.Preloader z animowanym logo
-3. W mozzilli jest zwalone styloanie galerri. Tylko elementy, które sa tworzone w JS. Dodanie parametru vh vw w JS powinno załątwić sprawe. Galeria się zoomuje
-4. Podlinkować napisy w home + 
+3.Stworzenie i podpięcie formularza zgłoszeniowego
+4. W mozzilli jest zwalone styloanie galerri. Tylko elementy, które sa tworzone w JS. Dodanie parametru vh vw w JS powinno załątwić sprawe. Galeria się zoomuje
  -->
 
 <html>
 <head> 
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
   <title>Milena Fleter Fotografia</title>  
   <link rel="Shortcut icon" href="images/logo.png" />       
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
   <link rel="stylesheet" href="reset.css"> 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="moveit.js"></script>         
   <script src="jquery.js"></script>      
@@ -20,11 +21,13 @@
           
 </head>     
 <body onselectstart="return false"> 
-  <div class="hamburgerMenu trigger"></div>
-  <div class="container">
-    <div class="ml menuLineOne"></div> 
-    <div class="ml menuLineTwo"></div> 
-    <div class="ml menuLineThree"></div>        
+  <div class="container"> 
+    <svg width="6vw" height="6vw"> 
+      <path id="first" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80" style="visibility: visible; stroke-dasharray: 43.5236, 246.634; stroke-dashoffset: 63.8346; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+      <path id="middle" d="M 30 50 L 70 50" style="visibility: visible; stroke-dasharray: 0, 40; stroke-dashoffset: 20; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+      <path id="second" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20" style="visibility: visible; stroke-dasharray: 43.707, 305.949; stroke-dashoffset: 64.6863; transition: stroke-dashoffset 0.9s cubic-bezier(0.7, 0, 0.3, 1), stroke-dasharray 0.9s cubic-bezier(0.7, 0, 0.3, 1); stroke-opacity: 1;"></path>                 
+    </svg>             
+    <div class="trigger"></div>             
   </div>
 
   <!-- MENU - ukryte pod bramami-->      
