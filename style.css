@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,800');
 
 body {
+  position: absolute;
   background: #1c1c1c;
   width: 100%;
   height: 100%;
@@ -8,16 +9,9 @@ body {
   font-weight: 400;
   font-size: 15px;
   color: #aa3e03;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-y: show;
+  overflow-x: show;
   z-index: 0;
-}
-.container {
-  position: absolute;
-  width: 6vw;
-  height: 6vw;
-  z-index: 997;
-  transition: 1s;
 }
 
 .hamburgerMenu {
@@ -30,6 +24,41 @@ body {
   left: 0;
 }
 
+.hamburgerMenu input{
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  z-index: 999;
+  cursor: pointer;
+  top: 0;
+  left: 0; 
+  margin: 0;
+  opacity: 0;
+}
+
+.hamburgerMenu input:hover ~ span:nth-last-child(1) {
+  top: 3.2vw;
+}
+
+.hamburgerMenu input:hover ~ span:nth-last-child(3) {
+  top: 2.3vw;
+}
+
+.hamburgerMenu input:checked ~ span:nth-last-child(1) {
+  top: 3vw;
+  transform: rotate(45deg);
+}
+
+.hamburgerMenu input:checked ~ span:nth-last-child(3) {
+  top: 3vw;
+  transform: rotate(-45deg);
+}
+
+
+.hamburgerMenu input:checked ~ span:nth-last-child(2) {
+  opacity: 0;
+}
+
 .ml {
   position: absolute;
   left: 1.5vw;
@@ -40,14 +69,17 @@ body {
 
 .menuLineOne {
   top: 2vw;
+  transition: 0.3s;
 }
 
 .menuLineTwo {
   top: 2.75vw;
+  transition: 0.3s;
 }
 
 .menuLineThree {
   top: 3.5vw;
+  transition: 0.3s;
 }
 
 .leftGate {
@@ -55,7 +87,6 @@ body {
   background-color: #f5f5f5;
   width: 6%;
   height: 100vh;
-  cursor: pointer;
   z-index: 2;
   top: 0;
   left: 0;
@@ -85,75 +116,6 @@ body {
   left: 6%;
 
 }
-
-.banner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  display: block;
-  text-shadow: 1px 1px 2px #000000;
-  text-align: center;
-
-}
-
-.banner h2 {
-  font-family: heavy;
-  color: white;
-  font-size: 4vw;
-  text-transform: uppercase;
-  margin-top: 16%;
-}
-
-.banner h2 {
-  font-family: heavy;
-  color: white;
-  font-size: 6vw;
-  text-transform: uppercase;
-  margin-top: 40vh;
-}
-
-.kreska{
-  width: 10vw;
-  height: 0.5vw;
-  background-color: rgb(15,162,127);
-  margin: 2vw 45%;
-}
-
-.banner p {
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  font-size: 1.2vw;
-}
-
-.przycisk {
-  width: 20vw;
-  padding: 1vw;
-  text-align: center;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  font-size: 1.2vw;
-  text-transform: uppercase;
-  transition: color 0.2s, background-color 0.2s;
-  margin: 3% 39%;
-}
-
-.przycisk:hover {
-  background-color: white;
-  color: black;
-}
-
-.siatka {
-  background-image: url('images/siatka.png');
-  opacity: 0.5;
-  width: 100vw;
-  height: 100vh;
-  z-index: 3;
-}
-
 
 .menu {
   position: absolute;
@@ -248,15 +210,202 @@ body {
 
 }
 
+.separatorMenu {
+  margin-left: 3.5vw;
+  width: 13vw;
+  border-top: 0.1vh solid #1c1c1c;
+
+}
+
 
 iframe {
   width: 100%;
   height: 100%;
 }
 
+
+
+
+@media only screen and (max-width: 680px) {
+
+
+.hamburgerMenu {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  z-index: 999;
+  cursor: pointer;
+  top: 0;
+  left: 80vw;
+}
+
+.hamburgerMenu input{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  z-index: 999;
+  cursor: pointer;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.hamburgerMenu input:hover ~ span:nth-last-child(1) {
+  top: 11vw;
+}
+
+.hamburgerMenu input:hover ~ span:nth-last-child(3) {
+  top: 5vw;
+}
+
+.hamburgerMenu input:checked ~ span:nth-last-child(1) {
+  top: 8vw;
+  transform: rotate(45deg);
+}
+
+.hamburgerMenu input:checked ~ span:nth-last-child(3) {
+  top: 8vw;
+  transform: rotate(-45deg);
+}
+
+.hamburgerMenu input:checked ~ span:nth-last-child(2) {
+  opacity: 0;
+}
+
+.ml {
+  position: absolute;
+  background-color: rgb(15,162,127);
+  width: 15vw;
+  height: 0.3vh;
+}
+
+.menuLineOne {
+  top: 5vw;
+  transition: 0.3s;
+}
+
+.menuLineTwo {
+  top: 8vw;
+  transition: 0.3s;
+}
+
+.menuLineThree {
+  top: 11vw;
+  transition: 0.3s;
+}
+
+
+   .leftGate {
+    display: none;
+  }
+
+  .rightGate {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.bigLogo {
+  width: 50vw;
+  height: 50vw;
+  margin-left: 25%;
+  margin-top: 10vh;
+  margin-bottom: 10vw;
+  background-image: url('images/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.menu {
+  position: absolute;
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.menuitem {
+  background-color: #f5f5f5;;
+  display: block;
+  width: 92.8vw;
+  height: 5.5vw;
+  position: static;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 5vw;
+  line-height: 5.5vw;
+  color: #818181;
+  cursor: pointer;
+  border-left: 0.6vw solid rgba(0,0,0,0.0);
+  border-right: 0.6vw solid rgba(0,0,0,0.0);
+  margin-bottom: 0;
+  padding: 1.5vh 3vw;
+  z-index: 1;
+}
+
+.menuitem:hover {
+  background-color: rgba(15,162,127,0.2);
+}
+
+.gallerymenu {
+  position: absolute;
+  background-color: #f5f5f5;
+  width: 100vw;
+  height: 49vh;
+  z-index: 2;
+  margin-top: 10vh;
+  top: 60vw;
+  left: -100%;
+}
+
+.gallerymenuitem {
+  display: block;
+  width: 92.8vw;
+  height: 5.5vw;
+  position: static;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 5vw;
+  line-height: 5.5vw;
+  color: #818181;
+  cursor: pointer;
+  border-left: 0.6vw solid rgba(0,0,0,0.0);
+  border-right: 0.6vw solid rgba(0,0,0,0.0);
+  margin-bottom: 0;
+  padding: 1.5vh 3vw;
+  z-index: 1;
+}
+
+.gallerymenuitem:hover {
+  background-color: rgba(15,162,127,0.2);
+
+}
+
+.thisPage {
+  border-left: 0.6vw solid rgb(15,162,127);
+  background-color: white;
+}
+
+.thisGallery {
+  border-left: 0.6vw solid rgb(15,162,127);
+  background-color: white;
+}
+
+.bar {
+  border-left: 0.6vw solid transparent;
+
+}
+
 .separatorMenu {
-  margin-left: 3.5vw;
-  width: 13vw;
-  border-top: 0.1vh solid #1c1c1c;
+  margin-left: 25vw;
+  width: 50vw;
+  border-top: 1px solid #1c1c1c;
+
+}
 
 }

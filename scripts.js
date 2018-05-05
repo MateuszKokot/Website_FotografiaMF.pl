@@ -1,6 +1,56 @@
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
 
+  var open = false;
+  var bodyWidth = $(document).width();
+
+
+
+if (bodyWidth < 680) {
+
+  $('.trigger').click(function(){
+    if (!open) {
+
+          // Tutaj mogę dopisać swoje skrypty dla pozycji "OTWIERAJ"
+
+            $('.rightGate').animate({'left': '+=100%' }, 'medium');
+          
+        } else {
+
+        // Tutaj mogę dopisać swoje skrypty dla pozycji "ZAMYKAJ"
+
+            $('.rightGate').animate({'left': '-=100%' }, 'medium');
+            $('#checkbox').prop('checked', false);
+
+      }
+      open = !open;
+    });
+
+} else {
+
+  $('.trigger').click(function(){
+    if (!open) {
+
+          // Tutaj mogę dopisać swoje skrypty dla pozycji "OTWIERAJ"
+
+            $('.rightGate').animate({'left': '+=14%' }, 'medium');
+            $('.leftGate').animate({'left': '-=6%' }, 'medium');
+          
+        } else {
+
+        // Tutaj mogę dopisać swoje skrypty dla pozycji "ZAMYKAJ"
+
+            $('.rightGate').animate({'left': '-=14%' }, 'medium');
+            $('.leftGate').animate({'left': '+=6%' }, 'medium');
+            $('#checkbox').prop('checked', false);
+
+      }
+      open = !open;
+    });
+}
+
+
+
 $('.activ').click(function(){
   $('.thisPage').removeClass('thisPage');
   $(this).addClass('thisPage');
@@ -17,10 +67,21 @@ $('#gallery').click(function(){
 });
 
 $('.hiddenGallery').click(function(){
-$('.gallerymenu').animate({'left': '-20vw' }, 'fast');
+
+  if (bodyWidth < 680) {
+
+    $('.gallerymenu').animate({'left': '-100vw' }, 'fast');
+  
+  } else {
+
+    $('.gallerymenu').animate({'left': '-20vw' }, 'fast');
+}
+
 });
 
 $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
+
+
 
 
 });
@@ -31,36 +92,6 @@ $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 $(window).resize(function(){
 
 });
-
-
-//kod do generowania animowanego hamburger menu
-$(function() {
-  var open = false;
-
-  $('.trigger').click(function(){
-    if (!open) {
-
-          // Tutaj mogę dopisać swoje skrypty dla pozycji "OTWIERAJ"
-
-            $('.rightGate').animate({'left': '+=14%' }, 'medium');
-            $('.leftGate').animate({'left': '-=6%' }, 'medium');
-          
-        } else {
-
-        // Tutaj mogę dopisać swoje skrypty dla pozycji "ZAMYKAJ"
-
-            $('.rightGate').animate({'left': '-=14%' }, 'medium');
-            $('.leftGate').animate({'left': '+=6%' }, 'medium');
-
-      }
-      open = !open;
-    });
-
-})
-
-
-
-
 
 
 

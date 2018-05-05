@@ -1,5 +1,4 @@
 <!--
-1.Hamburger menu zrobiony z divów
 2.Preloader z animowanym logo
 3. W mozzilli jest zwalone styloanie galerri. Tylko elementy, które sa tworzone w JS. Dodanie parametru vh vw w JS powinno załątwić sprawe. Galeria się zoomuje
 4. Podlinkować napisy w home + 
@@ -18,14 +17,17 @@
   <script src="jquery.js"></script>      
   <script src="scripts.js"></script>         
           
-</head>     
+</head> 
 <body onselectstart="return false"> 
-  <div class="hamburgerMenu trigger"></div>
-  <div class="container">
-    <div class="ml menuLineOne"></div> 
-    <div class="ml menuLineTwo"></div> 
-    <div class="ml menuLineThree"></div>        
-  </div>
+
+  <nav role="navigation">
+    <div class="hamburgerMenu">
+      <input id="checkbox" type="checkbox" class="trigger" />
+        <span class="ml menuLineOne"></span> 
+        <span class="ml menuLineTwo"></span> 
+       <span class="ml menuLineThree"></span>        
+    </div>
+  </nav>
 
   <!-- MENU - ukryte pod bramami-->      
   <div class="menu">
