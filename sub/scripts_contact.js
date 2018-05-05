@@ -7,8 +7,24 @@ function contactFormShow() {
 
 function contactFormHidden() {
 
-	$('.contactForm').animate({opacity: '0'}, "medium");
-	$('.backgroundForm').animate({opacity: '00'}, "medium");
-	$('.backgroundForm').animate({top: '-100vh'},);
-	$('.contactForm').animate({top: '-100vh'},);
+	var bodyWidth = $(document).width();
+
+	if (bodyWidth < 680) {
+
+		$('.contactForm').animate({opacity: '0'}, "medium");
+		$('.backgroundForm').animate({opacity: '00'}, "medium");
+		$('.backgroundForm').animate({top: '-130vh'},);
+		$('.contactForm').animate({top: '-100vh'},);
+ 
+
+	} else {
+
+		$('.contactForm').animate({opacity: '0'}, "medium");
+		$('.backgroundForm').animate({opacity: '00'}, "medium");
+		$('.backgroundForm').animate({top: '-100vh'},);
+		$('.contactForm').animate({top: '-100vh'},);
+
+	  
+	}
+
 }

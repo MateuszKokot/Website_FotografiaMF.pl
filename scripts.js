@@ -14,12 +14,14 @@ if (bodyWidth < 680) {
           // Tutaj mogę dopisać swoje skrypty dla pozycji "OTWIERAJ"
 
             $('.rightGate').animate({'left': '+=100%' }, 'medium');
+            $('.rightGate').animate({'width': '0%' }, 'fast');
           
         } else {
 
         // Tutaj mogę dopisać swoje skrypty dla pozycji "ZAMYKAJ"
 
             $('.rightGate').animate({'left': '-=100%' }, 'medium');
+            $('.rightGate').animate({'width': '100%' }, 'fast');
             $('#checkbox').prop('checked', false);
 
       }
@@ -90,6 +92,8 @@ $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 
 // Jeśli zmieni się wielkość ekranu
 $(window).resize(function(){
+
+window.location = location.href;
 
 });
 

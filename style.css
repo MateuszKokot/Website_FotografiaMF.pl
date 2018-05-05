@@ -332,7 +332,7 @@ iframe {
 .menuitem {
   background-color: #f5f5f5;;
   display: block;
-  width: 92.8vw;
+  width: 84vw;
   height: 5.5vw;
   position: static;
   text-align: center;
@@ -341,8 +341,8 @@ iframe {
   line-height: 5.5vw;
   color: #818181;
   cursor: pointer;
-  border-left: 0.6vw solid rgba(0,0,0,0.0);
-  border-right: 0.6vw solid rgba(0,0,0,0.0);
+  border-left: 5vw solid rgba(0,0,0,0.0);
+  border-right: 5vw solid rgba(0,0,0,0.0);
   margin-bottom: 0;
   padding: 1.5vh 3vw;
   z-index: 1;
@@ -365,7 +365,7 @@ iframe {
 
 .gallerymenuitem {
   display: block;
-  width: 92.8vw;
+  width: 84vw;
   height: 5.5vw;
   position: static;
   text-align: center;
@@ -374,8 +374,8 @@ iframe {
   line-height: 5.5vw;
   color: #818181;
   cursor: pointer;
-  border-left: 0.6vw solid rgba(0,0,0,0.0);
-  border-right: 0.6vw solid rgba(0,0,0,0.0);
+  border-left: 5vw solid rgba(0,0,0,0.0);
+  border-right: 5vw solid rgba(0,0,0,0.0);
   margin-bottom: 0;
   padding: 1.5vh 3vw;
   z-index: 1;
@@ -387,12 +387,12 @@ iframe {
 }
 
 .thisPage {
-  border-left: 0.6vw solid rgb(15,162,127);
+  border-left: 5vw solid rgb(15,162,127);
   background-color: white;
 }
 
 .thisGallery {
-  border-left: 0.6vw solid rgb(15,162,127);
+  border-left: 5vw solid rgb(15,162,127);
   background-color: white;
 }
 
