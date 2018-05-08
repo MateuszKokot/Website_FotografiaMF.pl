@@ -147,4 +147,54 @@
 	font-size: 2vw;
 	text-align: left;
 }
+
+
+@media only screen and (max-width: 680px) {
+
+.mainImg {
+
+}
+
+.listImg {
+	display: none;
+
+}
+
+.arrow {
+	display: none;
+
+}
+
+.ctrlBar {
+	position: absolute;
+	height: 10vh;
+	width: 100vw;
+	bottom: 5vh;
+	left: 0vw;
+	background-color: #1c1c1c;
+	opacity: 0.5;
+	font-weight: 200;
+
+}
+
+.counter{
+	position: absolute;
+	color: rgb(15,162,127);
+	width: auto;
+	right: 50%;
+	line-height: 10vw;
+	font-size: 10vw ;
+	text-align: right;
+}
+
+.counterTotal{
+	position: absolute;
+	color: rgb(15,162,127);
+	width: auto;
+	left: 50%;
+	font-size: 6vw;
+	text-align: left;
+}
+
+
 }

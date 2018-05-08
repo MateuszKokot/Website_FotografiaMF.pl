@@ -1,14 +1,25 @@
 
 //Zmienne globalne
-
 var counter = 0;
 
 
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
 
+var bodyWidth = $(document).width();
+
+
+if (bodyWidth < 680) {
+
+createGalleryMobile()
+arrowClick()
+
+} else {
+
 createGallery();
 arrowClick();
+
+}
 
 });
 
@@ -24,7 +35,8 @@ location.reload();
 
 // Pojedyńcze funkcje
 
-function createGallery() {
+
+function createGallery() { // Tworzy galerie dla dużych ekranów
 var tab = document.getElementsByClassName("obrazek");
 var howMuchImg = tab.length;
 var rightGateWidth = $(document).width();
@@ -52,8 +64,34 @@ $('.ctrlBar').css('height', (rightGateWidth / 9 * 1.5 / 5));
 
 
 
+function createGalleryMobile() { // Tworzy galerie dla małych ekranów
+var tab = document.getElementsByClassName("obrazek");
+var howMuchImg = tab.length;
+var rightGateWidth = $(document).width();
+var summaryWidth = howMuchImg * rightGateWidth;
 
-function arrowClick() {
+$('.gallery').after('<div class="mainImg"></div>');
+$('.mainImg').css('width', summaryWidth);
+$('.mainImg').after('<div class="listImg"></div>');
+$('.listImg').css('width', rightGateWidth / 9 * howMuchImg);
+$('.listImg').after('<div class="ctrlBar"><div class="arrow leftArrow"></div><span class="counter">txt</span><span class="counterTotal">/'+(howMuchImg)+'</span><div class="arrow rightArrow"></div></div>');
+
+for (var i = 1; i < howMuchImg+1; i++) {
+	var source = $('.obrazek:nth-child('+i+')').attr('src'); // Pobiera SRC obrazków podstawionych do DIV przechowującego galeria
+	$('.mainImg').append('<div class="bigImg" style="background-image: url('+source+')"></div>'); // Tworzy kolejne DVI'y w mainImg i doaje do nich tło z SRC
+	$('.listImg').append('<div class="smallImgOwn"><div id="'+(i-1)+'" class="smallImg" style="background-image: url('+source+')"></div></div>');
+}
+
+$('.bigImg').css('width', rightGateWidth); // Ustawia dla wstawionych DIV szerokość taką jak szerokość rightGate
+$('.counter').html(''+(counter+1)+'');
+
+}
+
+
+
+
+
+function arrowClick() { // Funkcje obsługujące akcje w galerii (kliknięcia, klawiaturę dotyk)
 
 var tab = document.getElementsByClassName("obrazek"); //wczytuje obrazki z niewidocznego div
 var howMuchImg = tab.length; // sprawdza ile ich jest
