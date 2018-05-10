@@ -9,25 +9,23 @@
   <meta charset="utf-8">
   <title>Milena Fleter Fotografia</title>  
   <link rel="Shortcut icon" href="images/logo.png" />       
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"> 
   <link rel="stylesheet" href="reset.css"> 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script src="moveit.js"></script>         
-  <script src="jquery.js"></script>      
+  <script src="jquery.js"></script>     
   <script src="scripts.js"></script>         
           
 </head> 
 <body onselectstart="return false"> 
 
-  <nav role="navigation">
     <div class="hamburgerMenu">
       <input id="checkbox" type="checkbox" class="trigger" />
         <span class="ml menuLineOne"></span> 
         <span class="ml menuLineTwo"></span> 
        <span class="ml menuLineThree"></span>        
     </div>
-  </nav>
 
   <!-- MENU - ukryte pod bramami-->      
   <div class="menu">
@@ -62,7 +60,7 @@
   </div>
 
     <!-- LEWA BRAMA-->      
-      <div class="leftGate trigger" id="leftGate">
+      <div class="leftGate" id="leftGate">
         <div class="smallLogo"></div>
 
       </div>    

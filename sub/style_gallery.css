@@ -7,8 +7,6 @@
   	height: 100vh;
   	font-family: 'raleway', sans-serif;
 	font-weight: 200;
-  	overflow-y: hidden;
-  	overflow-x: hidden;
   	overflow: hidden;
   	z-index: 0;
 	animation: softStart 1s linear 0s 1 normal ;

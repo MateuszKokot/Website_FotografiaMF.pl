@@ -1,6 +1,7 @@
 //Po wczytaniu plików odpal to
 $(document).ready(function(){
 
+
   var open = false;
   var bodyWidth = $(document).width();
 
@@ -93,7 +94,6 @@ $('#rightGate').html('<iframe src="sub/home.html"></iframe>');
 // Jeśli zmieni się wielkość ekranu
 $(window).resize(function(){
 
-window.location = location.href;
 
 });
 

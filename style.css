@@ -9,8 +9,8 @@ body {
   font-weight: 400;
   font-size: 15px;
   color: #aa3e03;
-  overflow-y: show;
-  overflow-x: show;
+  overflow-y: hidden;
+  overflow-x: hidden;
   z-index: 0;
 }
 

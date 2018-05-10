@@ -8,17 +8,20 @@ $(document).ready(function(){
 
 var bodyWidth = $(document).width();
 
+//This listens for the back button press
+	document.addEventListener('tizenhwkey', function(e) {
+        if(e.keyName == "back")
+            tizen.application.getCurrentApplication().exit();
+    });
+
+
 
 if (bodyWidth < 680) {
-
 createGalleryMobile()
 arrowClick()
-
 } else {
-
 createGallery();
 arrowClick();
-
 }
 
 });
@@ -218,6 +221,68 @@ $(document).keydown(function(event){ // obsługa galeri strzałakmi kalawiatury
   }
 
 });
+
+
+var element = document.getElementById('galleryBody');
+var hammertime = new Hammer(element);
+hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+    // Swipe  Gesture
+    var hammertime = Hammer(element).on("swipeup", function(event) {
+    	console.log('up');
+    });
+    var hammertime = Hammer(element).on("swipedown", function(event) {
+    	console.log('down');
+    });
+    var hammertime = Hammer(element).on("swipeleft", function(event) {
+    	console.log('left');
+	var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
+
+	if (counter < howMuchImg - 1) {
+		$('#'+counter+'').removeClass('activImg');
+		counter = counter + 1;
+		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
+		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
+		$('.counter').html(''+(counter+1)+'');
+		
+		for (var i = 0; i <= (howMuchImg / 9); i++) {
+
+			if (counter == ((i*9)+9) ) {
+				console.log('zmianaprawo');
+				$('.listImg').animate({left: ( -( ((i*9)+9) * smallImgWidth))});
+			}
+		}
+
+	}
+
+    });
+    var hammertime = Hammer(element).on("swiperight", function(event) {
+console.log('right');
+    var position = $('.mainImg').position().left; // sprawdza obecną pozycje DIV'a
+
+	if (counter  != 0) {
+		$('#'+counter+'').removeClass('activImg');
+		counter = counter - 1;
+		$('#'+counter+'').addClass('activImg');
+		$('.mainImg').css('opacity', 0.0);
+		$('.mainImg').css("left", ( -(counter * rightGateWidth)));
+		$('.mainImg').animate({opacity: 1.0});
+		$('.counter').html(''+(counter+1)+'');
+		
+		for (var i = 0; i <= (howMuchImg / 9); i++) {
+
+			if (counter == ((i*9)+8) ) {
+				console.log('zmianalewo');
+				$('.listImg').animate({left: ( -( (i*9) * smallImgWidth))});
+			}
+		}
+		
+	}
+
+
+    });
 
 
 
